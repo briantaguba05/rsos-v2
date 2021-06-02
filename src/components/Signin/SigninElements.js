@@ -10,11 +10,7 @@ export const Container = styled.div`
   right: 0;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient(
-    108deg,
-    rgba(1, 147, 86, 1) 0%,
-    rgba(10, 201, 122, 1) 100%
-  );
+  background: linear-gradient(108deg, #d8c3a5, #fff);
 `;
 
 export const FormWrap = styled.div`
@@ -54,8 +50,8 @@ export const Icon = styled(Link)`
     }
 `;
 
-export const Form = styled.form`
-  background: #010101;
+export const Form = styled.div`
+  background: #9ba0ab;
   max-width: 400px;
   height: auto;
   width: 100%;
@@ -93,33 +89,50 @@ export const FormInput = styled.input`
 `;
 
 export const FormButton1 = styled.button`
-  background: #01bf71;
+  background: #fff;
   padding: 16px 0;
   border: none;
   border-radius: 40px;
-  color: #fff;
+  color: #8e8d8a;
   font-size: 20px;
   cursor: pointer;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #14213d;
+    color: #fff;
+  }
 `;
 
 export const FormButton2 = styled.button`
-  background: #01bf71;
+  background: #e85a4f;
   padding: 32px 0;
   border: none;
   border-radius: 40px;
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #01bf71;
+    color: #d90429;
+  }
 `;
 
 export const Text = styled.span`
   text-align: center;
   margin-top: 24px;
-  color: #fff;
+  color: #ffb238;
   font-size: 14px;
+
+  &.hover {
+    cursor: pointer;
+    color: #4213D;
+  }
 `;
 
 export const ErrorMsg = styled.p`
-  color: #fff;
+  color: red;
   font-size: 14px;
 `;

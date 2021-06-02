@@ -23,7 +23,7 @@ const Tutorials = () => {
           <TutorialsP>Learn basic first aid for your trip</TutorialsP>
         </TutorialsCard>
 
-        <TutorialsCard>
+        <TutorialsCard path="/handguide">
           <TutorialsIcon src={Icon2} />
           <TutorialsH2>Motorcycle Hand Signs</TutorialsH2>
           <TutorialsP>
@@ -31,12 +31,12 @@ const Tutorials = () => {
           </TutorialsP>
         </TutorialsCard>
 
-        <TutorialsCard>
+        <TutorialsCard path="/techniques">
           <TutorialsIcon src={Icon3} />
           <TutorialsH2>Motorcycle Safety Techniques</TutorialsH2>
           <TutorialsP>
-            Learn techniques to aware yourself of what is the most
-            efficient way of riding!
+            Learn techniques to aware yourself of what is the most efficient way
+            of riding!
           </TutorialsP>
         </TutorialsCard>
       </TutorialsWrapper>

@@ -36,7 +36,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink>
 
           <SidebarLink to="signup" onClick={toggle}>
-            Sign Up
+            Start Now!
           </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>

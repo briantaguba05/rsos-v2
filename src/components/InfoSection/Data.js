@@ -51,3 +51,20 @@ export const homeObjThree = {
   primary: true,
   darkText: false,
 };
+
+export const homeObjFour = {
+  id: "signup",
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: "RSOS™",
+  headline: "Get Started Now!",
+  description: "Register now and enjoy the member-exclusive features!",
+  buttonLabel: "Register",
+  imgStart: false,
+  img: require("../../images/undAuthRed.svg").default,
+  alt: "Sign",
+  dark: true,
+  primary: true,
+  darkText: false,
+};

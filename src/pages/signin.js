@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ScrollToTop from "../components/ScrollToTop";
 import SignIn from "../components/Signin";
 import fire from "../firebase";
-import Navbar from '../components/Navbar';
+import Navbar from "../components/Navbar";
 
 const SignInPage = () => {
   const [user, setUser] = useState("");
@@ -79,8 +79,8 @@ const SignInPage = () => {
     authListener();
   }, []);
   return (
-      <>
-          <Navbar />
+    <>
+      <Navbar />
       <ScrollToTop />
       <SignIn
         email={email}

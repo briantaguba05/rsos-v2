@@ -111,7 +111,7 @@ const Navbar = ({ toggle }) => {
                   offset={-80}
                   activeClass="active"
                 >
-                  Signup
+                  Start Now!
                 </NavLinks>
               </NavItem>
             </NavMenu>
