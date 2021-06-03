@@ -10,7 +10,7 @@ export const Container = styled.div`
   right: 0;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient(108deg, #d8c3a5, #fff);
+  background: #fff;
 `;
 
 export const FormWrap = styled.div`
@@ -51,7 +51,7 @@ export const Icon = styled(Link)`
 `;
 
 export const Form = styled.div`
-  background: #9ba0ab;
+  background: #14213d;
   max-width: 400px;
   height: auto;
   width: 100%;
@@ -93,30 +93,30 @@ export const FormButton1 = styled.button`
   padding: 16px 0;
   border: none;
   border-radius: 40px;
-  color: #8e8d8a;
+  color: #ffb238;
   font-size: 20px;
   cursor: pointer;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #14213d;
+    background: #ffb238;
     color: #fff;
   }
 `;
 
 export const FormButton2 = styled.button`
-  background: #e85a4f;
-  padding: 32px 0;
+  background: #fff;
+  padding: 20px 0;
   border: none;
   border-radius: 40px;
-  color: #fff;
+  color: #14213d;
   font-size: 20px;
   cursor: pointer;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #01bf71;
-    color: #d90429;
+    background: #e85a4f;
+    color: #fff;
   }
 `;
 

@@ -34,7 +34,7 @@ const SignIn = (props) => {
         <Icon to="/">RSOS</Icon>
         <FormContent>
           <Form>
-            <FormH1>Signin to your account</FormH1>
+            <FormH1>Login to your account</FormH1>
             <FormLabel htmlFor="for">Email</FormLabel>
             <FormInput
               type="email"
