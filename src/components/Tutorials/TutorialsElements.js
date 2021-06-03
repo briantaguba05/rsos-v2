@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
+import { Link as LinkS } from "react-scroll";
 // eslint-disable-next-line no-unused-vars
 const goodblue = "#2293D4";
 
@@ -84,4 +86,19 @@ export const TutorialsP = styled.p`
   font-size: 1rem;
   text-align: center;
   font-family: "Roboto Mono", monospace;
+`;
+
+export const TutLink = styled(LinkR)`
+  white-space: nowrap;
+  padding: 10px 22px;
+  font-size: 16px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 `;

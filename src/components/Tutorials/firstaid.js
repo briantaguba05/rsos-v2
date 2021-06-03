@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const firstaid = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <div>
+      <p>FIRST AID PAGE</p>
+    </div>
+  );
+};
 
-export default firstaid
+export default firstaid;

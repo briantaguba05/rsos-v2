@@ -117,3 +117,17 @@ export const NavBtnLink = styled(LinkR)`
     color: #14213d;
   }
 `;
+
+export const DropDown = styled.a`
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+`;
