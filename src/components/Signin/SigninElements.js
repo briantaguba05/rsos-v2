@@ -39,9 +39,10 @@ export const Icon = styled(Link)`
     margin-left: 32px;
     margin-top: 32px;
     text-decoration: none;
-    color: #fff;
+    color: #14213D;
     font-weight: 700;
     font-size: 32px;
+    font-family: "Montserrat", sans-serif;
 
     @media screen and (max-width: 480px) {
         margin-left: 16px;
@@ -73,12 +74,14 @@ export const FormH1 = styled.h1`
   font-size: 20px;
   font-weight: 400;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 `;
 
 export const FormLabel = styled.label`
   margin-bottom: 8px;
   font-size: 14px;
   color: #fff;
+  font-family: "Montserrat", sans-serif;
 `;
 
 export const FormInput = styled.input`
@@ -86,6 +89,7 @@ export const FormInput = styled.input`
   margin-bottom: 32px;
   border: none;
   border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
 `;
 
 export const FormButton1 = styled.button`
@@ -96,6 +100,7 @@ export const FormButton1 = styled.button`
   color: #ffb238;
   font-size: 20px;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
 
   &:hover {
     transition: all 0.2s ease-in-out;
@@ -112,6 +117,7 @@ export const FormButton2 = styled.button`
   color: #14213d;
   font-size: 20px;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
 
   &:hover {
     transition: all 0.2s ease-in-out;
@@ -125,6 +131,7 @@ export const Text = styled.span`
   margin-top: 24px;
   color: #ffb238;
   font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 
   &.hover {
     cursor: pointer;
@@ -135,4 +142,5 @@ export const Text = styled.span`
 export const ErrorMsg = styled.p`
   color: red;
   font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 `;
