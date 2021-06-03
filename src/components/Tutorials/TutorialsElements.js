@@ -8,7 +8,7 @@ export const TutorialsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #d8c3a5;
+  background: #14213d;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -65,7 +65,7 @@ export const TutorialsIcon = styled.img`
 
 export const TutorialsH1 = styled.h1`
   font-size: 2.5rem;
-  color: #e85a4f;
+  color: #fff;
   margin-bottom: 64px;
   font-family: "Roboto Mono", monospace;
 

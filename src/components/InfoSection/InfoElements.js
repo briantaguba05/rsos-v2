@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? "#D8C3A5" : "#EAE7DC")};
+  background: ${({ lightBg }) => (lightBg ? "#14213D" : "#fff")};
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -69,7 +69,7 @@ export const Heading = styled.h1`
   line-height: 1.1;
   font-weight: 600;
   font-family: "Roboto Mono", monospace;
-  color: ${({ lightText }) => (lightText ? "#E85A4F" : "#E85A4F")};
+  color: ${({ lightText }) => (lightText ? "#14213D" : "#fff")};
 
   @media screen and (max width: 480px) {
     font-size: 32px;
@@ -82,7 +82,7 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   font-family: "Roboto Mono", monospace;
-  color: ${({ darkText }) => (darkText ? "#fff" : "#8E8D8A")};
+  color: ${({ darkText }) => (darkText ? "#9BA0AB" : "#8E8D8A")};
 `;
 
 export const BtnWrap = styled.div`

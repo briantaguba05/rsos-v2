@@ -44,7 +44,7 @@ export const MainContent = styled.div`
 `;
 
 export const MainH1 = styled.h1`
-  color: #e98074;
+  color: #FFB238;
   font-size: 48px;
   text-align: center;
 
@@ -59,7 +59,7 @@ export const MainH1 = styled.h1`
 
 export const MainP = styled.p`
   margin-top: 24px;
-  color: #fff;
+  color: #FFC730;
   font-size: 24px;
   text-align: center;
   max-width: 600px;

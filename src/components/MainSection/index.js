@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Video from "../../videos/day_road.mp4";
+import Video from "../../videos/global.mp4";
 import { Button } from "../ButtonElements";
 import {
   MainContainer,
