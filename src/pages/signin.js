@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import ScrollToTop from "../components/ScrollToTop";
 import SignIn from "../components/Signin";
 import fire from "../firebase";
+// eslint-disable-next-line no-unused-vars
 import Navbar from "../components/Navbar";
+import Dashboard from "../pages/dashboard";
+import Footer from "../components/Footer";
 
 const SignInPage = () => {
   const [user, setUser] = useState("");
@@ -27,7 +30,6 @@ const SignInPage = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch((err) => {
-        // eslint-disable-next-line default-case
         switch (err.code) {
           case "auth/invalid-email":
           case "auth/user-disabled":
@@ -47,7 +49,6 @@ const SignInPage = () => {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .catch((err) => {
-        // eslint-disable-next-line default-case
         switch (err.code) {
           case "auth/email-already-in-use":
           case "auth/invalid-email":
@@ -80,20 +81,24 @@ const SignInPage = () => {
   }, []);
   return (
     <>
-      <Navbar />
       <ScrollToTop />
-      <SignIn
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        handleLogin={handleLogin}
-        handleSignup={handleSignup}
-        hasAccount={hasAccount}
-        setHasAccount={setHasAccount}
-        emailError={emailError}
-        passwordError={passwordError}
-      />
+      {user ? (
+        <Dashboard handleLogout={handleLogout} />
+      ) : (
+        <SignIn
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          handleLogin={handleLogin}
+          handleSignup={handleSignup}
+          hasAccount={hasAccount}
+          setHasAccount={setHasAccount}
+          emailError={emailError}
+          passwordError={passwordError}
+        />
+      )}
+      <Footer />
     </>
   );
 };

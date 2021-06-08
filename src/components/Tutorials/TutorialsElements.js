@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { Link as LinkS } from "react-scroll";
 // eslint-disable-next-line no-unused-vars
 const goodblue = "#2293D4";
@@ -87,6 +88,11 @@ export const TutorialsP = styled.p`
   text-align: center;
   font-family: "Roboto Mono", monospace;
 `;
+export const TutorialsP2 = styled.p`
+  font-size: 1rem;
+  text-align: left;
+  font-family: "Roboto Mono", monospace;
+`;
 
 export const TutLink = styled(LinkR)`
   white-space: nowrap;
@@ -101,4 +107,66 @@ export const TutLink = styled(LinkR)`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
+`;
+
+export const TitleDiv = styled.div`
+  font-family: "Roboto Mono", monospace;
+  font-size: 3rem;
+  text-align: center;
+  justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  margin-top: 50px;
+`;
+
+export const ImageCont = styled.img`
+  height: auto;
+  max-width: 100%;
+`;
+
+export const UnivList = styled.ul`
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  padding: 15px;
+`;
+
+export const LocList = styled.li`
+  font-family: "Roboto Mono", monospace;
+  text-align: left;
+  padding: 15px;
+`;
+
+export const TutorialsCard2 = styled.div`
+  background: #fff3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0 1 px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+`;
+
+export const TutorialsWrapper2 = styled.div`
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /*add more 1fr if adding more column*/
+  align-items: center;
+  grid-gap: 16px;
+  padding: 0 50px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
 `;
