@@ -13,6 +13,7 @@ import {
   FormButton2,
   Text,
   ErrorMsg,
+  FormButton3,
 } from "./SigninElements";
 
 const SignIn = (props) => {
@@ -54,23 +55,13 @@ const SignIn = (props) => {
             <ErrorMsg className="errorMsg">{passwordError}</ErrorMsg>
 
             <div className="btnContainer">
-              {hasAccount ? (
-                <>
-                  <FormButton1 onClick={handleLogin}>LOG IN</FormButton1>
-                  <FormLabel> Don't Have An Account?{""} </FormLabel>
-                  <Text onClick={() => setHasAccount(!hasAccount)}>
-                    Register Now!
-                  </Text>
-                </>
-              ) : (
-                <>
-                  <FormButton2 onClick={handleSignup}>Signup</FormButton2>
-                  <FormLabel> Already Have An Account?{""} </FormLabel>
-                  <Text onClick={() => setHasAccount(!hasAccount)}>
-                    Login Now
-                  </Text>
-                </>
-              )}
+              <>
+                <FormButton1 onClick={handleLogin}>LOG IN</FormButton1>
+                <FormLabel> Don't Have An Account?{""} </FormLabel>
+                <FormButton3 to="/signupindex2">
+                  <Text>Register Now!</Text>
+                </FormButton3>
+              </>
             </div>
           </Form>
         </FormContent>

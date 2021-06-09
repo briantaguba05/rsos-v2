@@ -1,4 +1,5 @@
 export const homeObjOne = {
+  to: "home",
   id: "about",
   lightBg: false,
   lightText: true,
@@ -17,6 +18,7 @@ export const homeObjOne = {
 };
 
 export const homeObjTwo = {
+  to: "home",
   id: "functions",
   lightBg: true,
   lightText: false,
@@ -35,6 +37,7 @@ export const homeObjTwo = {
 };
 
 export const homeObjThree = {
+  to: "home",
   id: "download",
   lightBg: false,
   lightText: true,
@@ -53,6 +56,7 @@ export const homeObjThree = {
 };
 
 export const homeObjFour = {
+  to: "home",
   id: "signup",
   lightBg: false,
   lightText: true,

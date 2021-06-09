@@ -126,6 +126,11 @@ export const FormButton2 = styled.button`
   }
 `;
 
+export const FormButton3 = styled(Link)`
+  background: transparent;
+  border: none !important;
+`;
+
 export const Text = styled.span`
   text-align: center;
   margin-top: 24px;

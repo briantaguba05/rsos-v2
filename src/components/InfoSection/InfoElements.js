@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 export const InfoContainer = styled.div`
   color: #fff;
@@ -99,4 +100,27 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+`;
+
+export const InfoButton = styled(LinkR)`
+  border-radius: 50px;
+  background: ${({ primary }) => (primary ? "#14213D" : "#fff")};
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
+  color: ${({ dark }) => (dark ? "#fff" : "#14213D")};
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  font-family: "Roboto Mono", monospace;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => (primary ? "#9BA0AB" : "#9BA0AB")};
+    color: ${({ dark }) => (dark ? "#14213D" : "#fff")};
+  }
 `;
