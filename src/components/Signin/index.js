@@ -1,4 +1,5 @@
 import React from "react";
+import { signInWithGoogle } from "../../firebase";
 import "./login.css";
 import {
   Container,
@@ -13,6 +14,7 @@ import {
   Text,
   ErrorMsg,
   FormButton3,
+  FormButton2,
 } from "./SigninElements";
 
 const SignIn = (props) => {
@@ -53,6 +55,10 @@ const SignIn = (props) => {
             <div className="btnContainer">
               <>
                 <FormButton1 onClick={handleLogin}>LOG IN</FormButton1>
+                <br></br>
+                <FormButton2 onClick={signInWithGoogle}>
+                  SIGN IN WITH GOOGLE
+                </FormButton2>
                 <FormLabel> Don't Have An Account?{""} </FormLabel>
                 <FormButton3 to="/signup">
                   <Text>Register Now!</Text>

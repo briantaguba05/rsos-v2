@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import validate from "./validateInfo";
 import useForm from "./useForm";
-import { register } from "../../Auth";
+import { signInWithGoogle } from "../../firebase";
 import {
   Container,
   FormWrap,
@@ -15,6 +15,7 @@ import {
   Text,
   ErrorMsg,
   FormButton3,
+  FormButton2,
 } from "./SignUpElements";
 
 const SignUp = ({ submitForm }) => {
@@ -22,14 +23,6 @@ const SignUp = ({ submitForm }) => {
     submitForm,
     validate
   );
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-  });
-  const handleSubmit2 = async (e) => {
-    e.preventDefault();
-    await register(form);
-  };
 
   return (
     <Container>
@@ -99,6 +92,10 @@ const SignUp = ({ submitForm }) => {
             <div className="btnContainer">
               <>
                 <FormButton1>REGISTER ACCOUNT</FormButton1>
+                <br></br>
+                <FormButton2 onClick={signInWithGoogle}>
+                  SIGN IN WITH GOOGLE
+                </FormButton2>
 
                 <FormLabel> Already Have an Account?{""} </FormLabel>
                 <FormButton3 to="/signin">
