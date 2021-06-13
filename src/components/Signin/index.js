@@ -10,7 +10,6 @@ import {
   FormLabel,
   FormInput,
   FormButton1,
-  FormButton2,
   Text,
   ErrorMsg,
   FormButton3,
@@ -23,9 +22,6 @@ const SignIn = (props) => {
     password,
     setPassword,
     handleLogin,
-    handleSignup,
-    hasAccount,
-    setHasAccount,
     emailError,
     passwordError,
   } = props;
@@ -58,7 +54,7 @@ const SignIn = (props) => {
               <>
                 <FormButton1 onClick={handleLogin}>LOG IN</FormButton1>
                 <FormLabel> Don't Have An Account?{""} </FormLabel>
-                <FormButton3 to="/signupindex2">
+                <FormButton3 to="/signup">
                   <Text>Register Now!</Text>
                 </FormButton3>
               </>
