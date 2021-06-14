@@ -29,7 +29,7 @@ const MainSection = () => {
         <MainP>Riding has never been scary before! Emergency-secured!</MainP>
         <MainBtnWrapper>
           <Button
-            to="/signupindex2"
+            to="/signup"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
