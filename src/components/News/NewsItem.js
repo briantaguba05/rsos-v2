@@ -1,11 +1,11 @@
 import React from "react";
-import News from "./News";
+import "./NewsItem.css";
 import Axios from "axios";
 
 const NewsItem = ({ title, description, url, urlToImage }) => {
   return (
-    <div>
-      <img src={urlToImage} alt="New Image" />
+    <div className="news-item">
+      <img className="news-tag" src={urlToImage} alt="New Image" />
       <h3>
         <a href={url}>{title}</a>
       </h3>
