@@ -37,12 +37,12 @@ const News = () => {
   if (loading) {
     return <p>Data is loading...</p>;
   }
-  /*if (error || !Array.isArray(articles)) {
+  if (error || !Array.isArray(articles)) {
     return <p>There was an error loading your data!</p>;
-  }*/
+  }
 
   return (
-    <div>
+    <>
       {articles.map(({ title, description, url, urlToImage }) => (
         <NewsItem
           title={title}
@@ -51,7 +51,7 @@ const News = () => {
           urlToImage={urlToImage}
         />
       ))}
-    </div>
+    </>
   );
 };
 
