@@ -9,6 +9,16 @@ export default function validateInfo(values) {
   } //else if (!/^[A-Za-z]+/.test(values.name.trim())) {
   errors.lname = "Enter a valid name!";
 
+  if (!values.phoneNum.trim()) {
+    errors.phoneNum = "Phone Number required!";
+  }
+  if (!values.plateNum.trim()) {
+    errors.plateNum = "Enter a valid plate number!";
+  }
+  if (!values.motorType.trim()) {
+    errors.motorType = "e.g. Suzuki Skydrive or Yamaha Mio";
+  }
+
   if (!values.email) {
     errors.email = "Email required";
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {

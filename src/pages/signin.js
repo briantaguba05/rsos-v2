@@ -4,7 +4,7 @@ import SignIn from "../components/Signin";
 import fire from "../firebase";
 // eslint-disable-next-line no-unused-vars
 import Navbar from "../components/Navbar";
-import Dashboard from "../pages/dashboard";
+import DashboardM from "../pages/dashboard";
 import Footer from "../components/Footer";
 
 const SignInPage = () => {
@@ -83,7 +83,7 @@ const SignInPage = () => {
     <>
       <ScrollToTop />
       {user ? (
-        <Dashboard handleLogout={handleLogout} />
+        <DashboardM handleLogout={handleLogout} />
       ) : (
         <SignIn
           email={email}
@@ -91,7 +91,6 @@ const SignInPage = () => {
           password={password}
           setPassword={setPassword}
           handleLogin={handleLogin}
-          handleSignup={handleSignup}
           hasAccount={hasAccount}
           setHasAccount={setHasAccount}
           emailError={emailError}

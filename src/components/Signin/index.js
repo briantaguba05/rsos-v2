@@ -40,6 +40,7 @@ const SignIn = (props) => {
               required
               autoFocus
               value={email}
+              placeholder="example@email.com"
               onChange={(e) => setEmail(e.target.value)}
             />
             <ErrorMsg className="errorMsg">{emailError}</ErrorMsg>
@@ -48,6 +49,7 @@ const SignIn = (props) => {
               type="password"
               required
               value={password}
+              placeholder="Enter your password"
               onChange={(e) => setPassword(e.target.value)}
             />
             <ErrorMsg className="errorMsg">{passwordError}</ErrorMsg>

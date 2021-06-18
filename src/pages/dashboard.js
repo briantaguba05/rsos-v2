@@ -1,14 +1,17 @@
 import React from "react";
-import "../components/Signin/login.css";
+import Mapbox from "../components/Map/Mapbox";
+import Dashboard from "../Dashboard/Dashboard";
+import fire from "../firebase";
 
-const dashboard = ({ handleLogout }) => {
+const dashboard = () => {
+  const handleLogout = () => {
+    fire.auth().signOut();
+  };
   return (
-    <section className="hero">
-      <nav>
-        <h2>THIS IS THE AFTER-LOGIN PAGE // DASHBOARD</h2>
-        <button onClick={handleLogout}>LOG OUT</button>
-      </nav>
-    </section>
+    <>
+      <Dashboard handleLogout={handleLogout} />
+      <Mapbox />
+    </>
   );
 };
 

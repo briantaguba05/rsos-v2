@@ -11,6 +11,8 @@ import HandGuide from "./components/Tutorials/handguide";
 import Techniques from "./components/Tutorials/techniques";
 import SignUp2 from "./components/Signup/signupindex2";
 import SignUpT from "./components/Signup";
+import Dashboard from "./pages/dashboard";
+import Mapbox from "./components/Map/Mapbox";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/techniques" component={Techniques} exact />
         <Route path="/signupindex2" component={SignUp2} exact />
         <Route path="/signuptest" component={SignUpT} exact />
+        <Route path="/dashboard" component={Dashboard} exact />
+        <Route path="/mapbox" component={Mapbox} exact />
       </Switch>
     </Router>
   );

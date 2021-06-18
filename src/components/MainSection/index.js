@@ -19,8 +19,11 @@ const MainSection = () => {
   const onHover = () => {
     setHover(!hover);
   };
+
+  const Title = "RSOS - HOME";
   return (
     <MainContainer id="home">
+      <title>{Title}</title>
       <MainBg>
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </MainBg>

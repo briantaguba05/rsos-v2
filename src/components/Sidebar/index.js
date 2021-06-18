@@ -8,6 +8,7 @@ import {
   SidebarLink,
   SideBtnWrap,
   SidebarRoute,
+  SidebarRoute2,
 } from "./SidebarElements";
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -35,12 +36,12 @@ const Sidebar = ({ isOpen, toggle }) => {
             Tutorials
           </SidebarLink>
 
-          <SidebarLink to="signup" onClick={toggle}>
+          <SidebarLink to="/signup" onClick={toggle}>
             Start Now!
           </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/">Sign In</SidebarRoute>
+          <SidebarRoute to="/signin">Sign In</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
