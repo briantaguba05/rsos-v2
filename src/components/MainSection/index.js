@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Video from "../../videos/starrysky.mp4";
 import { Button } from "../ButtonElements";
+import grouplogo from "../../images/beneflogo2.png";
 import {
   MainContainer,
   MainBg,
@@ -11,6 +12,7 @@ import {
   MainBtnWrapper,
   ArrowForward,
   ArrowRight,
+  ImgLogo,
 } from "./MainElements";
 
 const MainSection = () => {
@@ -28,6 +30,7 @@ const MainSection = () => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </MainBg>
       <MainContent>
+        <ImgLogo src={grouplogo} alt="group-logo"></ImgLogo>
         <MainH1>RSOS™</MainH1>
         <MainP>Riding has never been scary before! Emergency-secured!</MainP>
         <MainBtnWrapper>

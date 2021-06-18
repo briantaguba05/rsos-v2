@@ -14,6 +14,11 @@ export const MainContainer = styled.div`
   /*ADD :before styled */
 `;
 
+export const ImgLogo = styled.img`
+  height: 400px;
+  width: 400px;
+`;
+
 export const MainBg = styled.div`
   position: absolute;
   top: 0;
@@ -44,7 +49,7 @@ export const MainContent = styled.div`
 `;
 
 export const MainH1 = styled.h1`
-  color: #FFB238;
+  color: #ffb238;
   font-size: 48px;
   text-align: center;
 
@@ -59,7 +64,7 @@ export const MainH1 = styled.h1`
 
 export const MainP = styled.p`
   margin-top: 24px;
-  color: #FFC730;
+  color: #ffc730;
   font-size: 24px;
   text-align: center;
   max-width: 600px;
