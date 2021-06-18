@@ -13,6 +13,7 @@ import SignUp2 from "./components/Signup/signupindex2";
 import SignUpT from "./components/Signup";
 import Dashboard from "./pages/dashboard";
 import Mapbox from "./components/Map/Mapbox";
+import News from "./components/News/News";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/signuptest" component={SignUpT} exact />
         <Route path="/dashboard" component={Dashboard} exact />
         <Route path="/mapbox" component={Mapbox} exact />
+        <Route path="/news" component={News} exact />
       </Switch>
     </Router>
   );
