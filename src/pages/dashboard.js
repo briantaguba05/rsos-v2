@@ -4,6 +4,8 @@ import Dashboard from "../Dashboard/Dashboard";
 import fire from "../firebase";
 import SidebarMenu from "../SidebarMenu/SidebarMenu";
 import ScrollToTop from "../components/ScrollToTop";
+import GMap from "../components/Map/GoogleMap";
+import Gtest from "../components/Map/Googletest";
 
 const dashboard = () => {
   const handleLogout = () => {
@@ -12,7 +14,6 @@ const dashboard = () => {
   return (
     <>
       <ScrollToTop />
-
       <Dashboard handleLogout={handleLogout} />
       <Mapbox />
     </>

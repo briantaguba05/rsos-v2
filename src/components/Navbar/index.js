@@ -11,8 +11,10 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
+  NavLinkRR
 } from "./NavbarElements";
 import { FaBars } from "react-icons/fa";
+import grouplogo from "../../images/beneflogo2.png";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);

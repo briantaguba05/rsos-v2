@@ -30,43 +30,6 @@ const SignUpPage = () => {
     setEmailError("");
     setPassword("");
   };
-
-  const handleLogin = () => {
-    clearErrors();
-    fire
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/invalid-email":
-          case "auth/user-disabled":
-          case "auth/user-not-found":
-            setEmailError(err.message);
-            break;
-          case "auth/wrong.password":
-            setPasswordError(err.message);
-            break;
-        }
-      });
-  };
-
-  const handleSignup = () => {
-    clearErrors();
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/email-already-in-use":
-          case "auth/invalid-email":
-            setEmailError(err.message);
-            break;
-          case "auth/wrong.password":
-            setPasswordError(err.message);
-            break;
-        }
-      });
-  };
   return (
     <>
       <div className="form-container">

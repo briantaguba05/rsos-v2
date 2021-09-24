@@ -15,9 +15,9 @@ import {
   BtnWrap,
   Img,
   BtnLink,
-} from "./InfoElements";
+} from "./InfoSectionN1Elements";
 
-const InfoSection = ({
+const InfoSectionN1 = ({
   to,
   lightBg,
   id,
@@ -46,7 +46,7 @@ const InfoSection = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <BtnLink
-                    to={to}
+                    to={"/about"}
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -73,4 +73,4 @@ const InfoSection = ({
   );
 };
 
-export default InfoSection;
+export default InfoSectionN1;

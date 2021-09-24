@@ -30,7 +30,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: #ffb238;
+  color: #d90429;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -99,7 +99,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #ffb238;
+  background: #bbdbb4;
   white-space: nowrap;
   padding: 10px 22px;
   color: #14213d;
@@ -129,5 +129,20 @@ export const DropDown = styled.a`
   .dropdown {
     float: left;
     overflow: hidden;
+  }
+`;
+
+export const NavLinkRR = styled(LinkR)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+
+  &.active {
+    border-bottom: 3px solid #d90429;
   }
 `;

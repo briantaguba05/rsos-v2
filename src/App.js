@@ -1,7 +1,5 @@
 import React from "react";
 import "./App.css";
-//import "bootstrap";
-//import "bootstrap/dist/css/bootstrap.css";
 import Home from "./pages";
 import SignInPage from "./pages/signin";
 import SignUpPage from "./pages/signup";
@@ -14,6 +12,7 @@ import SignUpT from "./components/Signup";
 import Dashboard from "./pages/dashboard";
 import Mapbox from "./components/Map/Mapbox";
 import News from "./components/News/News";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -30,6 +29,7 @@ function App() {
         <Route path="/dashboard" component={Dashboard} exact />
         <Route path="/mapbox" component={Mapbox} exact />
         <Route path="/news" component={News} exact />
+        <Route path="/about" component={About} exact />
       </Switch>
     </Router>
   );

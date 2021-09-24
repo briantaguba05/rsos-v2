@@ -26,13 +26,10 @@ const MainSection = () => {
   return (
     <MainContainer id="home">
       <title>{Title}</title>
-      <MainBg>
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
-      </MainBg>
+
       <MainContent>
-        <ImgLogo src={grouplogo} alt="group-logo"></ImgLogo>
         <MainH1>RSOS™</MainH1>
-        <MainP>Riding has never been scary before! Emergency-secured!</MainP>
+        <MainP>Police And Riders Alliance Club</MainP>
         <MainBtnWrapper>
           <Button
             to="/signup"
