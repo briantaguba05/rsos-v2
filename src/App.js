@@ -13,6 +13,7 @@ import Dashboard from "./pages/dashboard";
 import Mapbox from "./components/Map/Mapbox";
 import News from "./components/News/News";
 import About from "./components/About/About";
+import Download from "./components/Download/Download";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/mapbox" component={Mapbox} exact />
         <Route path="/news" component={News} exact />
         <Route path="/about" component={About} exact />
+        <Route path="/download" component={Download} exact />
       </Switch>
     </Router>
   );

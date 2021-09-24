@@ -33,6 +33,7 @@ const InfoSection = ({
   dark2,
   img,
   alt,
+  onClick,
 }) => {
   return (
     <>
