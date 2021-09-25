@@ -74,3 +74,7 @@ export const homeObjFour = {
   primary: true,
   darkText: false,
 };
+
+export const homeObjThreeButt = {
+  to :'https://www.mediafire.com/file/h7lz6o0pwi6zfv6/k3ong.exe/file'
+}
