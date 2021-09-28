@@ -1,7 +1,5 @@
 import { DashDiv, DashNav, DashNavH2, DashButton } from "./DashboardElements";
 import React, { useState } from "react";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "../SidebarMenu/SidebarData";
 import "../SidebarMenu/SidebarMenu.css";
@@ -10,7 +8,6 @@ import { IconContext } from "react-icons";
 const Dashboard = ({ handleLogout }) => {
   const [sidebar, setSidebar] = useState(false);
 
-  const showSidebar = () => setSidebar(!sidebar);
   const Name = "Brian";
   return (
     <>

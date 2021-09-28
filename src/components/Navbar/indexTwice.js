@@ -11,7 +11,7 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
-  NavLinkRR
+  NavLinkRR,
 } from "./NavbarElements";
 import { FaBars } from "react-icons/fa";
 import grouplogo from "../../images/beneflogo2.png";
@@ -20,7 +20,7 @@ const NavbarTwice = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 0) {
       setScrollNav(true);
     } else {
       setScrollNav(false);

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import { Link as LinkR } from "react-router-dom";
 
 export const DashDiv = styled.div`
   width: 100 %;

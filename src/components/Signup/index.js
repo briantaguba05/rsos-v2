@@ -18,6 +18,8 @@ import {
   FormButton3,
   FormButton2,
 } from "./SignUpElements";
+import { googleProvider } from "../../authMethods";
+import socialAuth from "../../service/auth";
 
 const SignUp = ({ submitForm }, props) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
@@ -25,6 +27,11 @@ const SignUp = ({ submitForm }, props) => {
     validate
   );
   const { emailError, passwordError } = props;
+
+  const handleOnClick = async (provider) => {
+    const res = await socialAuth(provider);
+    console.log(res);
+  };
 
   /*const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
@@ -152,7 +159,7 @@ const SignUp = ({ submitForm }, props) => {
                     REGISTER ACCOUNT
                   </FormButton1>
                   <br></br>
-                  <FormButton2 onClick={signInWithGoogle}>
+                  <FormButton2 onCLick={() => handleOnClick(googleProvider)}>
                     SIGN IN WITH GOOGLE
                   </FormButton2>
 

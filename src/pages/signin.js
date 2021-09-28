@@ -81,7 +81,7 @@ const SignInPage = () => {
   }, []);
   return (
     <>
-      <ScrollToTop />
+      
       {user ? (
         <DashboardM handleLogout={handleLogout} />
       ) : (

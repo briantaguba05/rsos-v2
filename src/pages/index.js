@@ -8,7 +8,6 @@ import {
   homeObjTwo,
   homeObjThree,
   homeObjFour,
-  homeObjThreeButt,
 } from "../components/InfoSection/Data";
 import Tutorials from "../components/Tutorials";
 import Footer from "../components/Footer";

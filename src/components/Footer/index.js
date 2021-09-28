@@ -18,9 +18,11 @@ const Footer = () => {
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
               <FooterLink to="/signin">@NU</FooterLink>
-              <FooterLink to="/signin">Contact Us</FooterLink>
-              <FooterLink to="/signin">Terms and Conditions</FooterLink>
-              <FooterLink to="/signin">Privacy Policy</FooterLink>
+              <FooterLink to="/contactus">Contact Us</FooterLink>
+              <FooterLink to="/terms-and-conditions">
+                Terms and Conditions
+              </FooterLink>
+              <FooterLink to="/privacypolicy">Privacy Policy</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>

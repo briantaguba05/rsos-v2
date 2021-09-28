@@ -1,5 +1,8 @@
 import React from "react";
-import { signInWithGoogle } from "../../firebase";
+import { googleProvider, facebookProvider } from "../../authMethods";
+import { signInWithFacebook, signInWithGoogle } from "../../firebase";
+import socialAuth from "../../service/auth";
+import Facebook from "../Facebook/Facebook";
 import "./login.css";
 import {
   Container,
@@ -15,6 +18,8 @@ import {
   ErrorMsg,
   FormButton3,
   FormButton2,
+  GoogleButton,
+  FacebookButton,
 } from "./SigninElements";
 
 const SignIn = (props) => {
@@ -27,6 +32,11 @@ const SignIn = (props) => {
     emailError,
     passwordError,
   } = props;
+
+  const handleOnClick = async (provider) => {
+    const res = await socialAuth(provider);
+    console.log(res);
+  };
   return (
     <Container>
       <FormWrap>
@@ -55,17 +65,25 @@ const SignIn = (props) => {
             <ErrorMsg className="errorMsg">{passwordError}</ErrorMsg>
 
             <div className="btnContainer">
-              <>
-                <FormButton1 onClick={handleLogin}>LOG IN</FormButton1>
-                <br></br>
-                <FormButton2 onClick={signInWithGoogle}>
-                  SIGN IN WITH GOOGLE
-                </FormButton2>
-                <FormLabel> Don't Have An Account?{""} </FormLabel>
-                <FormButton3 to="/signup">
-                  <Text>Register Now!</Text>
-                </FormButton3>
-              </>
+              <FormButton1 onClick={handleLogin}>LOG IN</FormButton1>
+              <br></br>
+            </div>
+            <div className="btnContainer">
+              <br></br>
+              <GoogleButton onClick={signInWithGoogle}>
+                SIGN IN WITH GOOGLE
+              </GoogleButton>
+            </div>
+            <div className="btnContainer">
+              <br></br>
+              <FormLabel> Don't Have An Account?{""} </FormLabel>
+              <FormButton3 to="/signup">
+                <Text>Register Now!</Text>
+              </FormButton3>
+            </div>
+            <div className="btnContainer">
+              <br></br>
+              <Facebook />
             </div>
           </Form>
         </FormContent>

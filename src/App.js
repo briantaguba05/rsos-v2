@@ -14,6 +14,8 @@ import Mapbox from "./components/Map/Mapbox";
 import News from "./components/News/News";
 import About from "./components/About/About";
 import Download from "./components/Download/Download";
+import Functions from "./components/Functions/Functions";
+import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
         <Route path="/news" component={News} exact />
         <Route path="/about" component={About} exact />
         <Route path="/download" component={Download} exact />
+        <Route path="/functions" component={Functions} exact />
+        <Route path="/privacypolicy" component={PrivacyPolicy} exact />
       </Switch>
     </Router>
   );
