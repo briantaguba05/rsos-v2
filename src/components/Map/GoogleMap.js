@@ -24,10 +24,11 @@ class LocationSearchModal extends React.Component {
     area: "",
     state: "",
     zoom: 15,
-    height: 400,
+    width: "100vw",
+    height: "100vh",
     mapPosition: {
-      lat: 0,
-      lng: 0,
+      lat: 14.5995,
+      lng: 120.9842,
     },
     markerPosition: {
       lat: 0,
@@ -283,7 +284,15 @@ class LocationSearchModal extends React.Component {
     );
 
     return (
-      <div style={{ padding: "1rem", margin: "0 auto", maxWidth: 1000 }}>
+      <div
+        style={{
+          paddingLeft: 250,
+          margin: " auto",
+          width: "100%",
+          flexFlow: "row nowrap",
+          justifyContent: "center",
+        }}
+      >
         {/*<h1>Google Map Basic</h1>
         <Descriptions bordered>
           <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
@@ -299,7 +308,7 @@ class LocationSearchModal extends React.Component {
         <AsyncMap
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq8z9IyhCI5LqM79AGVIOXyk-kG0AU4I0&libraries=places"
           loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{height: this.state.height }} />}
+          containerElement={<div style={{ height: this.state.height }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div>

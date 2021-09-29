@@ -4,7 +4,7 @@ import { Link as LinkR } from "react-router-dom";
 export const AboutContent = styled.div`
   background: #14213d;
   padding: 20px 30px;
-  height: 500px;
+  height: 700px;
   position: left;
   z-index: 1;
 `;
@@ -19,7 +19,7 @@ export const AboutH1 = styled.h1`
 export const AboutContentSec = styled.div`
   background: #fff;
   padding: 20 30px;
-  height: 500px;
+  height: 700px;
   position: left;
   z-index: 1;
 `;
@@ -70,4 +70,43 @@ export const AboutPSec = styled.p`
 
 export const AboutIMG = styled.img`
   height: 300px;
+  float: right;
+  padding: 10px 10px 10px 10px;
+`;
+
+export const AboutIMGSec = styled.img`
+  height: 300px;
+  float: left;
+`;
+
+export const SectionOne = styled.div`
+  display: left;
+  height: 100px;
+
+  justify-content: flex-start;
+`;
+
+export const AboutPLarge = styled.p`
+  color: #fff;
+  padding: 10px 10px;
+  font-size: 30px;
+`;
+
+export const AboutPSecLarge = styled.p`
+  color: #14213d;
+  padding: 10px 10px;
+  font-size: 30px;
+`;
+
+export const AboutPSecMed = styled.p`
+  color: #14213d;
+  padding: 10px 10px;
+  font-size: 25px;
+`;
+
+export const SectionTwo = styled.div`
+  display: center;
+  justify-content: flex-start;
+  height: 300px;
+  float: right;
 `;
