@@ -16,6 +16,7 @@ import About from "./components/About/About";
 import Download from "./components/Download/Download";
 import Functions from "./components/Functions/Functions";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
+import { NewsContextProvider } from "./components/News/NewsContext";
 
 function App() {
   return (
@@ -31,7 +32,9 @@ function App() {
         <Route path="/signuptest" component={SignUpT} exact />
         <Route path="/dashboard" component={Dashboard} exact />
         <Route path="/mapbox" component={Mapbox} exact />
+
         <Route path="/news" component={News} exact />
+
         <Route path="/about" component={About} exact />
         <Route path="/download" component={Download} exact />
         <Route path="/functions" component={Functions} exact />

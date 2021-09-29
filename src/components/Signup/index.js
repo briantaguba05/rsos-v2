@@ -66,7 +66,6 @@ const SignUp = ({ submitForm }, props) => {
       <ScrollToTop />
       <Container>
         <FormWrap>
-          <Icon to="/">RSOS</Icon>
           <FormContent>
             <Form>
               <FormH1>Register Now</FormH1>

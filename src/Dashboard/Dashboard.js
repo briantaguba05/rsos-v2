@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { SidebarData } from "../SidebarMenu/SidebarData";
 import "../SidebarMenu/SidebarMenu.css";
 import { IconContext } from "react-icons";
+import { FaIcons } from "react-icons/fa";
+import { AiIcons } from "react-icons/ai";
 
 const Dashboard = ({ handleLogout }) => {
   const [sidebar, setSidebar] = useState(false);
@@ -16,7 +18,7 @@ const Dashboard = ({ handleLogout }) => {
           <IconContext.Provider value={{ color: "#fff" }}>
             <div className="navbar">
               {/*<Link to="#" className="menu-bars">
-                <FaIcons.FaBars onClick={showSidebar} />
+                <FaIcons.FaBars onClick={setSidebar} />
               </Link>*/}
             </div>
             <nav className={!sidebar ? "nav-menu active" : "nav-menu"}>

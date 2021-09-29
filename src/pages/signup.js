@@ -4,6 +4,7 @@ import "../components/Signup/Forms.css";
 import SignUp from "../components/Signup";
 import Dashboard from "../pages/dashboard";
 import fire from "../firebase";
+import Navbar from "../components/Navbar";
 
 const SignUpPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -32,13 +33,14 @@ const SignUpPage = () => {
   };
   return (
     <>
+      <Navbar />
       <div className="form-container">
         <span className="close-btn">×</span>
         <div className="form-content-left">
           <img className="form-img" src="img/img-2.svg" alt="spaceship" />
         </div>
         {!isSubmitted ? (
-          <SignUp submitForm={submitForm}/>
+          <SignUp submitForm={submitForm} />
         ) : (
           <Dashboard handleLogout={handleLogout} />
         )}
