@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
+export const AboutMain = styled.div`
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+`;
 export const AboutContent = styled.div`
   background: #14213d;
   padding: 20px 30px;
@@ -76,11 +81,11 @@ export const AboutIMG = styled.img`
 
 export const AboutIMGSec = styled.img`
   height: 300px;
-  float: left;
+  margin-right: 30px;
 `;
 
 export const SectionOne = styled.div`
-  display: left;
+  text-align: right;
   height: 100px;
 
   justify-content: flex-start;
@@ -105,8 +110,7 @@ export const AboutPSecMed = styled.p`
 `;
 
 export const SectionTwo = styled.div`
-  display: center;
+  text-align: left;
   justify-content: flex-start;
   height: 300px;
-  float: right;
 `;

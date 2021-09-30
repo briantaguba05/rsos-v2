@@ -19,6 +19,7 @@ import {
   AboutPSecLarge,
   AboutPSecMed,
   SectionTwo,
+  AboutMain,
 } from "./AboutElements";
 
 const About = () => {
@@ -34,53 +35,55 @@ const About = () => {
       <ScrollToTop />
       <NavbarTwice toggle={toggle} />
       <Filler />
-      <AboutContent>
-        <AboutH1>About The Team</AboutH1>
-        <AboutIMG src="/beneflogo2.png" alt="image"></AboutIMG>
-        <AboutIMG src="/beneflogo1.png" alt="image"></AboutIMG>
-        <AboutPLarge>P.A.R.A.C.</AboutPLarge>
-        <br></br>
-        <AboutP>
-          Stands for Police And Riders Alliance Club, formed in 2015 lorem ipsum
-          dolor met
-        </AboutP>
-        <AboutP>lorem ipsum dolor met additional info</AboutP>
-        <AboutP>lorem ipsum dolor met additional info</AboutP>
-        <AboutP>lorem ipsum dolor met additional info</AboutP>
-        <AboutP>lorem ipsum dolor met additional info</AboutP>
-        <AboutP>lorem ipsum dolor met additional info</AboutP>
-        <AboutP>lorem ipsum dolor met additional info</AboutP>
-
-        <br></br>
-        <br></br>
-        <br></br>
-      </AboutContent>
-      {/*<BackButton to="/">GO BACK</BackButton>*/}
-      <AboutContentSec>
-        <AboutH1Sec>About The Developers</AboutH1Sec>
-        <SectionOne>
-          <AboutIMGSec src="/NUSEAL.png" alt="image"></AboutIMGSec>
-          <AboutPSecLarge>National University Manila</AboutPSecLarge>
-        </SectionOne>
-        <AboutPSec>BSIT-MWA Students</AboutPSec>
-        <AboutPSec>Team HapLoss-B</AboutPSec>
-
-        <SectionTwo>
+      <AboutMain>
+        <AboutContent>
+          <AboutH1>About The Team</AboutH1>
+          <AboutIMG src="/beneflogo2.png" alt="image"></AboutIMG>
+          <AboutIMG src="/beneflogo1.png" alt="image"></AboutIMG>
+          <AboutPLarge>P.A.R.A.C.</AboutPLarge>
           <br></br>
-          <AboutPSecMed>Supervised By :</AboutPSecMed>
-          <AboutPSec>Mr. Eliseo Ramirez</AboutPSec>
-          <br></br>
-          <AboutPSecMed>Built By:</AboutPSecMed>
-          <AboutPSec>Mr. Junel L. Posio</AboutPSec>
-          <AboutPSec>Mr. Brian Karl Taguba</AboutPSec>
-          <AboutPSec>Mr. Cymon Mopera</AboutPSec>
-          <AboutPSec>Mr. Schuck Carvajal</AboutPSec>
-        </SectionTwo>
-      </AboutContentSec>
+          <AboutP>
+            Stands for Police And Riders Alliance Club, formed in 2015 lorem
+            ipsum dolor met
+          </AboutP>
+          <AboutP>lorem ipsum dolor met additional info</AboutP>
+          <AboutP>lorem ipsum dolor met additional info</AboutP>
+          <AboutP>lorem ipsum dolor met additional info</AboutP>
+          <AboutP>lorem ipsum dolor met additional info</AboutP>
+          <AboutP>lorem ipsum dolor met additional info</AboutP>
+          <AboutP>lorem ipsum dolor met additional info</AboutP>
 
-      <AboutContent>
-        <AboutH1>THIRD PANEL</AboutH1>
-      </AboutContent>
+          <br></br>
+          <br></br>
+          <br></br>
+        </AboutContent>
+        {/*<BackButton to="/">GO BACK</BackButton>*/}
+        <AboutContentSec>
+          <AboutH1Sec>About The Developers</AboutH1Sec>
+          <SectionOne>
+            <AboutIMGSec src="/NUSEAL.png" alt="image"></AboutIMGSec>
+            <AboutPSecLarge>National University Manila</AboutPSecLarge>
+          </SectionOne>
+          <AboutPSec>BSIT-MWA Students</AboutPSec>
+          <AboutPSec>Team HapLoss-B</AboutPSec>
+
+          <SectionTwo>
+            <br></br>
+            <AboutPSecMed>Supervised By :</AboutPSecMed>
+            <AboutPSec>Mr. Eliseo Ramirez</AboutPSec>
+            <br></br>
+            <AboutPSecMed>Built By:</AboutPSecMed>
+            <AboutPSec>Mr. Junel L. Posio</AboutPSec>
+            <AboutPSec>Mr. Brian Karl Taguba</AboutPSec>
+            <AboutPSec>Mr. Cymon Mopera</AboutPSec>
+            <AboutPSec>Mr. Schuck Carvajal</AboutPSec>
+          </SectionTwo>
+        </AboutContentSec>
+
+        <AboutContent>
+          <AboutH1>THIRD PANEL</AboutH1>
+        </AboutContent>
+      </AboutMain>
     </>
   );
 };

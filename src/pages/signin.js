@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ScrollToTop from "../components/ScrollToTop";
 import SignIn from "../components/Signin";
 import fire from "../firebase";
-// eslint-disable-next-line no-unused-vars
-import Navbar from "../components/Navbar";
 import DashboardM from "../pages/dashboard";
 import Footer from "../components/Footer";
 
@@ -43,24 +40,6 @@ const SignInPage = () => {
       });
   };
 
-  const handleSignup = () => {
-    clearErrors();
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/email-already-in-use":
-          case "auth/invalid-email":
-            setEmailError(err.message);
-            break;
-          case "auth/wrong.password":
-            setPasswordError(err.message);
-            break;
-        }
-      });
-  };
-
   const handleLogout = () => {
     fire.auth().signOut();
   };
@@ -81,7 +60,6 @@ const SignInPage = () => {
   }, []);
   return (
     <>
-      
       {user ? (
         <DashboardM handleLogout={handleLogout} />
       ) : (

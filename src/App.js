@@ -17,6 +17,7 @@ import Download from "./components/Download/Download";
 import Functions from "./components/Functions/Functions";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import { NewsContextProvider } from "./components/News/NewsContext";
+import PageNotFound from "./404";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/download" component={Download} exact />
         <Route path="/functions" component={Functions} exact />
         <Route path="/privacypolicy" component={PrivacyPolicy} exact />
+        <Route component={PageNotFound} />
       </Switch>
     </Router>
   );

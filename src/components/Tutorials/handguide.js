@@ -30,12 +30,14 @@ import hand13 from "../../images/hand13.png";
 import hand14 from "../../images/hand14.png";
 import hand15 from "../../images/hand15.png";
 import hand16 from "../../images/hand16.png";
+import { Filler } from "../About/AboutElements";
 
 const handguide = () => {
   return (
     <>
       <ScrollToTop />
       <Navbar />
+      <Filler />
       <TitleDiv>
         Motorcycle Hand Guides
         <br></br>

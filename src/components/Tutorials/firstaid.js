@@ -23,12 +23,14 @@ import f10Poison from "../../images/f10.poison.png";
 import ScrollToTop from "../ScrollToTop";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import { Filler } from "../About/AboutElements";
 
 const firstaid = () => {
   return (
     <>
       <ScrollToTop />
       <Navbar />
+      <Filler />
       <TitleDiv>
         First Aid Guides
         <br></br>
