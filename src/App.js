@@ -54,8 +54,8 @@ function App() {
           <Route path="/privacypolicy" component={PrivacyPolicy} exact />
           <Route path="/termsconditions" component={TermsConditions} exact />
           <Route path="/404" component={PageNotFound} />
-          <Redirect to="/404" />
         </AuthProvider>
+        <Redirect to="/404" />
 
         {/*<Route path="/signin" component={SignInPage} exact />
         <Route path="/signup" component={SignUpPage} exact />*/}

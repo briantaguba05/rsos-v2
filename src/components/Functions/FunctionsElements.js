@@ -9,6 +9,11 @@ export const FunctContent = styled.div`
   height: 500px;
   z-index: 1;
   margin: auto;
+
+  @media screen and (max width: 480px) {
+    margin: auto;
+    height: 800px;
+  }
 `;
 
 export const FunctH1 = styled.h1`
@@ -17,6 +22,10 @@ export const FunctH1 = styled.h1`
   text-align: center;
   margin: auto;
   font-family: "Alegreya";
+
+  @media screen and (max width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 export const FunctContentSec = styled.div`
@@ -28,6 +37,10 @@ export const FunctContentSec = styled.div`
   height: 500px;
   z-index: 1;
   margin: auto;
+
+  @media screen and (max width: 480px) {
+    height: 800px;
+  }
 `;
 
 export const FunctH1Sec = styled.h1`
@@ -36,12 +49,20 @@ export const FunctH1Sec = styled.h1`
   text-align: center;
   margin: auto;
   font-family: "Alegreya";
+  @media screen and (max width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 export const FuncIMG = styled.img`
   height: 300px;
   width: 300px;
   margin: auto;
+
+  @media screen and (max width: 480px) {
+    height: 150px;
+    width: 150px;
+  }
 `;
 
 export const FunctP = styled.p`
@@ -50,6 +71,9 @@ export const FunctP = styled.p`
   text-align: center;
   margin: auto;
   font-family: "Alegreya";
+  @media screen and (max width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const FunctPSec = styled.p`
@@ -58,6 +82,9 @@ export const FunctPSec = styled.p`
   text-align: center;
   margin: auto;
   font-family: "Alegreya";
+  @media screen and (max width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const FunctFiller = styled.div`
