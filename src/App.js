@@ -1,12 +1,7 @@
 import React from "react";
 import "./App.css";
 import Home from "./pages";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FirstAid from "./components/Tutorials/firstaid";
 import HandGuide from "./components/Tutorials/handguide";
 import Techniques from "./components/Tutorials/techniques";
@@ -39,6 +34,7 @@ function App() {
           <ProtectRoute path="/signin" component={Login} exact />
           <PrivateRoute path="/dashboard" component={Dashboard} exact />
           <PrivateRoute path="/myinfo" component={MyInfo} />
+          <PrivateRoute path="/weather" component={Weather} exact />
           <Route path="/forgotpassword" component={ForgotPass} exact />
           <Route path="/firstaid" component={FirstAid} exact />
           <Route path="/handguide" component={HandGuide} exact />
@@ -50,16 +46,10 @@ function App() {
           <Route path="/download" component={Download} exact />
           <Route path="/functions" component={Functions} exact />
 
-          <PrivateRoute path="/weather" component={Weather} exact />
           <Route path="/privacypolicy" component={PrivacyPolicy} exact />
           <Route path="/termsconditions" component={TermsConditions} exact />
-          <Route path="/404" component={PageNotFound} />
+          <Route path="*" exact={true} component={PageNotFound} />
         </AuthProvider>
-        <Redirect to="/404" />
-
-        {/*<Route path="/signin" component={SignInPage} exact />
-        <Route path="/signup" component={SignUpPage} exact />*/}
-        <Switch></Switch>
       </Switch>
     </Router>
   );
