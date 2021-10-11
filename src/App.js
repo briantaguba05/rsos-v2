@@ -6,7 +6,6 @@ import FirstAid from "./components/Tutorials/firstaid";
 import HandGuide from "./components/Tutorials/handguide";
 import Techniques from "./components/Tutorials/techniques";
 import Dashboard from "./pages/dashboard";
-import News from "./components/News/News";
 import About from "./components/About/About";
 import Download from "./components/Download/Download";
 import Functions from "./components/Functions/Functions";
@@ -21,6 +20,8 @@ import ForgotPass from "./components/ForgotPass";
 import MyInfo from "./components/MyInfo";
 import Weather from "./components/Weather/Weather";
 import ProtectRoute from "./components/ProtectRoute";
+import News from "./components/News/News";
+import { NewsContextProvider } from "./components/News/NewsContext";
 
 function App() {
   return (
@@ -37,8 +38,9 @@ function App() {
           <Route path="/firstaid" component={FirstAid} exact />
           <Route path="/handguide" component={HandGuide} exact />
           <Route path="/techniques" component={Techniques} exact />
-
-          <Route path="/news" component={News} exact />
+          <NewsContextProvider>
+            <Route path="/news" component={News} exact />
+          </NewsContextProvider>
           <Route path="/about" component={About} exact />
           <Route path="/download" component={Download} exact />
           <Route path="/functions" component={Functions} exact />

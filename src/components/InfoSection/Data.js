@@ -1,5 +1,3 @@
-
-
 export const homeObjOne = {
   to: "/about",
   id: "about",
@@ -27,8 +25,7 @@ export const homeObjTwo = {
   lightTextDesc: false,
   topLine: "RSOS™",
   headline: "Functions? We Got That!",
-  description:
-    "1-tap Emergency Button, to send sms to your contact list and dial 911! Plus, a countdown-timer that you can set to ensure enhanced safety. If ever the timer goes to 0, It will warn you and if you did not respond to the warning, it will trigger emergency mode!",
+  description: "1-tap Emergency Button? View more of our app features here.",
   buttonLabel: "Functions",
   imgStart: true,
   img: require("../../images/undQuestionBlue.svg").default,
@@ -76,5 +73,5 @@ export const homeObjFour = {
 };
 
 export const homeObjThreeButt = {
-  to :'https://www.mediafire.com/file/h7lz6o0pwi6zfv6/k3ong.exe/file'
-}
+  to: "https://www.mediafire.com/file/h7lz6o0pwi6zfv6/k3ong.exe/file",
+};

@@ -9,9 +9,7 @@ export const NewsContextProvider = (props) => {
 
   useEffect(() => {
     axios
-      .get(
-        `http://newsapi.org/v2/everything?q=rich&from=2020-07-19&sortBy=publishedAt&apiKey=${apiKey}`
-      )
+      .get(`https://newsapi.org/v2/top-headlines?country=ph&apiKey=${apiKey}`)
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
   }, []);
