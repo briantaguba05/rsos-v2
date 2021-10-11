@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { NewsContext, NewsContextProvider } from "./NewsContext";
+import { NewsContext } from "./NewsContext";
 import NewsArticle from "./NewsArticle";
 
 function News(props) {

@@ -10,9 +10,9 @@ import Geocode from "react-geocode";
 import Autocomplete from "react-google-autocomplete";
 //import { Descriptions } from "antd";
 
-const {
+/*const {
   MarkerWithLabel,
-} = require("react-google-maps/lib/components/addons/MarkerWithLabel");
+} = require("react-google-maps/lib/components/addons/MarkerWithLabel");*/
 
 Geocode.setApiKey("AIzaSyBq8z9IyhCI5LqM79AGVIOXyk-kG0AU4I0");
 Geocode.enableDebug();

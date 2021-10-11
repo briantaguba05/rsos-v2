@@ -1,6 +1,4 @@
 import React from "react";
-import { Button, Button2 } from "../ButtonElements";
-import { NavBtnLink } from "../Navbar/NavbarElements";
 import {
   ImgWrap,
   InfoContainer,

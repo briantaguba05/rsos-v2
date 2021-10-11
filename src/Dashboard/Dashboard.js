@@ -1,16 +1,28 @@
 import { DashDiv, DashNav, DashNavH2, DashButton } from "./DashboardElements";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { SidebarData } from "../SidebarMenu/SidebarData";
 import "../SidebarMenu/SidebarMenu.css";
 import { IconContext } from "react-icons";
-import { FaIcons } from "react-icons/fa";
-import { AiIcons } from "react-icons/ai";
+import { useAuth } from "../components/AuthContext";
 
-const Dashboard = ({ handleLogout }) => {
+const Dashboard = () => {
+  const [error, setError] = useState("");
   const [sidebar, setSidebar] = useState(false);
+  const { currentUser, logout } = useAuth();
+  const history = useHistory();
 
-  const Name = "Brian";
+  async function handleLogout() {
+    setError("");
+
+    try {
+      await logout();
+      history.push("/signin");
+    } catch {
+      setError("Failed to log out");
+    }
+  }
+
   return (
     <>
       <DashDiv>
@@ -41,7 +53,7 @@ const Dashboard = ({ handleLogout }) => {
               </ul>
             </nav>
           </IconContext.Provider>
-          <DashNavH2>Welcome {Name}!</DashNavH2>
+          <DashNavH2>Welcome {currentUser.email}</DashNavH2>
           <DashButton onClick={handleLogout}>LOG OUT</DashButton>
         </DashNav>
       </DashDiv>

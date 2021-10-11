@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Button } from "../ButtonElements";
-import MainSection from "../MainSection";
 import NavbarTwice from "../Navbar";
 import ScrollToTop from "../ScrollToTop";
 import {
@@ -8,7 +6,6 @@ import {
   AboutContentSec,
   AboutH1,
   AboutH1Sec,
-  BackButton,
   Filler,
   AboutP,
   AboutIMG,
@@ -23,7 +20,6 @@ import {
 } from "./AboutElements";
 
 const About = () => {
-  const to = <MainSection />;
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {

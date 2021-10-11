@@ -1,46 +1,55 @@
 import React from "react";
 import "./App.css";
 import Home from "./pages";
-import SignInPage from "./pages/signin";
-import SignUpPage from "./pages/signup";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FirstAid from "./components/Tutorials/firstaid";
 import HandGuide from "./components/Tutorials/handguide";
 import Techniques from "./components/Tutorials/techniques";
-import SignUp2 from "./components/Signup/signupindex2";
-import SignUpT from "./components/Signup";
 import Dashboard from "./pages/dashboard";
-import Mapbox from "./components/Map/Mapbox";
 import News from "./components/News/News";
 import About from "./components/About/About";
 import Download from "./components/Download/Download";
 import Functions from "./components/Functions/Functions";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
-import { NewsContextProvider } from "./components/News/NewsContext";
 import PageNotFound from "./404";
+import TermsConditions from "./components/TermsConditions/TermsConditions";
+import SignUp from "./components/Signup/index";
+import Login from "./components/Login/index";
+import { AuthProvider } from "./components/AuthContext";
+import PrivateRoute from "./components/PrivateRoute";
+import ForgotPass from "./components/ForgotPass";
+import MyInfo from "./components/MyInfo";
+import Weather from "./components/Weather/Weather";
+import ProtectRoute from "./components/ProtectRoute";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/signin" component={SignInPage} exact />
-        <Route path="/signup" component={SignUpPage} exact />
-        <Route path="/firstaid" component={FirstAid} exact />
-        <Route path="/handguide" component={HandGuide} exact />
-        <Route path="/techniques" component={Techniques} exact />
-        <Route path="/signupindex2" component={SignUp2} exact />
-        <Route path="/signuptest" component={SignUpT} exact />
-        <Route path="/dashboard" component={Dashboard} exact />
-        <Route path="/mapbox" component={Mapbox} exact />
+        <AuthProvider>
+          <Route path="/" component={Home} exact />
 
-        <Route path="/news" component={News} exact />
+          <ProtectRoute path="/signup" component={SignUp} />
+          <ProtectRoute path="/signin" component={Login} exact />
+          <PrivateRoute path="/dashboard" component={Dashboard} exact />
+          <PrivateRoute path="/myinfo" component={MyInfo} />
+          <Route path="/forgotpassword" component={ForgotPass} exact />
+          <Route path="/firstaid" component={FirstAid} exact />
+          <Route path="/handguide" component={HandGuide} exact />
+          <Route path="/techniques" component={Techniques} exact />
 
-        <Route path="/about" component={About} exact />
-        <Route path="/download" component={Download} exact />
-        <Route path="/functions" component={Functions} exact />
-        <Route path="/privacypolicy" component={PrivacyPolicy} exact />
+          <Route path="/news" component={News} exact />
+          <Route path="/about" component={About} exact />
+          <Route path="/download" component={Download} exact />
+          <Route path="/functions" component={Functions} exact />
+
+          <PrivateRoute path="/weather" component={Weather} exact />
+          <Route path="/privacypolicy" component={PrivacyPolicy} exact />
+          <Route path="/termsconditions" component={TermsConditions} exact />
+        </AuthProvider>
         <Route component={PageNotFound} />
+        {/*<Route path="/signin" component={SignInPage} exact />
+        <Route path="/signup" component={SignUpPage} exact />*/}
       </Switch>
     </Router>
   );

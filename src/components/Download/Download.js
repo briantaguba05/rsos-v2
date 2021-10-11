@@ -1,4 +1,3 @@
-import React from "react";
 import FileSaver from "file-saver";
 
 const Download = async () => {

@@ -163,3 +163,7 @@ export const NavLinkRR = styled(LinkR)`
     border-bottom: 3px solid #d90429;
   }
 `;
+
+export const NavbarWrap = styled.div`
+  margin: auto;
+`;

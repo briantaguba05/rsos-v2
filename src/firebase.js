@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import "firebase/auth";
 
 var firebaseConfig = {
   apiKey: "AIzaSyD3XMpRjJFTsT5U97lowJvqDyO_ipjIKwg",
@@ -15,11 +16,7 @@ const fire = firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();
 
 const provider = new firebase.auth.GoogleAuthProvider();
-const provider2 = new firebase.auth.FacebookAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
-provider2.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
-
-export const signInWithFacebook = () => auth.signInWithPopup(provider2);
 
 export default fire;

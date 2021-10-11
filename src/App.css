@@ -2,5 +2,23 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: 'Raleway';
+}
+
+.card-body {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: .25rem;
 }

@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import Video from "../../videos/starrysky.mp4";
 import { Button } from "../ButtonElements";
-import grouplogo from "../../images/beneflogo2.png";
 import {
   MainContainer,
-  MainBg,
-  VideoBg,
   MainContent,
   MainH1,
   MainP,
   MainBtnWrapper,
   ArrowForward,
   ArrowRight,
-  ImgLogo,
 } from "./MainElements";
 
 const MainSection = () => {
