@@ -1,7 +1,12 @@
 import React from "react";
 import "./App.css";
 import Home from "./pages";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import FirstAid from "./components/Tutorials/firstaid";
 import HandGuide from "./components/Tutorials/handguide";
 import Techniques from "./components/Tutorials/techniques";
@@ -48,10 +53,13 @@ function App() {
           <PrivateRoute path="/weather" component={Weather} exact />
           <Route path="/privacypolicy" component={PrivacyPolicy} exact />
           <Route path="/termsconditions" component={TermsConditions} exact />
+          <Route path="/404" component={PageNotFound} />
+          <Redirect to="/404" />
         </AuthProvider>
-        <Route component={PageNotFound} />
+
         {/*<Route path="/signin" component={SignInPage} exact />
         <Route path="/signup" component={SignUpPage} exact />*/}
+        <Switch></Switch>
       </Switch>
     </Router>
   );

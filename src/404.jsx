@@ -1,6 +1,7 @@
 import { CenterFocusStrong } from "@material-ui/icons";
 import React from "react";
 import Navbar from "./components/Navbar";
+import pnf from "./images/page404.png";
 
 const divMain = {
   textAlign: "center",
@@ -21,11 +22,7 @@ const PageNotFound = () => {
         <Navbar />
         <div style={divStyle2}></div>
 
-        <img
-          height="300px"
-          width="300px"
-          src="https://i.imgur.com/aFUQ1qx.jpg"
-        />
+        <img height="80%" width="80%" src={pnf} />
 
         <div style={divStyle} id="info">
           <h2>404 PAGE NOT FOUND!</h2>
