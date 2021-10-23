@@ -17,7 +17,6 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
-              <FooterLink to="/signin">@NU</FooterLink>
               <FooterLink to="/contactus">Contact Us</FooterLink>
               <FooterLink to="/termsconditions">
                 Terms and Conditions

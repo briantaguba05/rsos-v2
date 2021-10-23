@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
   background-color: #14213d;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
 `;
 
 export const FooterWrap = styled.div`
+  height: 150px;
   padding: 48px 24px;
   display: flex;
   flex-direction: column;

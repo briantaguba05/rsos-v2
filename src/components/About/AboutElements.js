@@ -9,9 +9,17 @@ export const AboutMain = styled.div`
 export const AboutContent = styled.div`
   background: #14213d;
   padding: 20px 30px;
-  height: 700px;
+  height: 800px;
   position: left;
   z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    height: 1000px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 1500px;
+  }
 `;
 
 export const AboutH1 = styled.h1`
@@ -19,14 +27,30 @@ export const AboutH1 = styled.h1`
   font-size: 48px;
   text-align: center;
   padding: 10px 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 export const AboutContentSec = styled.div`
   background: #fff;
   padding: 20 30px;
-  height: 700px;
+  height: 800px;
   position: left;
   z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    height: 1000px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 1500px;
+  }
 `;
 
 export const AboutH1Sec = styled.h1`
@@ -34,6 +58,14 @@ export const AboutH1Sec = styled.h1`
   font-size: 48px;
   text-align: center;
   padding: 10px 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 export const BackButton = styled(LinkR)`
@@ -66,11 +98,27 @@ export const Filler = styled.div`
 export const AboutP = styled.p`
   color: #fff;
   padding: 10px 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 8px;
+  }
 `;
 
 export const AboutPSec = styled.p`
   color: #14213d;
   padding: 10px 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 8px;
+  }
 `;
 
 export const AboutIMG = styled.img`

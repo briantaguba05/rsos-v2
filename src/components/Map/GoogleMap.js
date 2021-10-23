@@ -286,11 +286,11 @@ class LocationSearchModal extends React.Component {
     return (
       <div
         style={{
-          paddingLeft: 250,
+          paddingLeft: 0,
           margin: " auto",
           width: "100%",
           flexFlow: "row nowrap",
-          justifyContent: "center",
+          /*justifyContent: "center",*/
         }}
       >
         {/*<h1>Google Map Basic</h1>
@@ -307,9 +307,9 @@ class LocationSearchModal extends React.Component {
 
         <AsyncMap
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq8z9IyhCI5LqM79AGVIOXyk-kG0AU4I0&libraries=places"
-          loadingElement={<div style={{ height: `100%` }} />}
+          loadingElement={<div style={{ height: `80%` }} />}
           containerElement={<div style={{ height: this.state.height }} />}
-          mapElement={<div style={{ height: `100%` }} />}
+          mapElement={<div style={{ height: `80%` }} />}
         />
       </div>
     );
