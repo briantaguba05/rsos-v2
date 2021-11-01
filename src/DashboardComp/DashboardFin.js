@@ -5,6 +5,7 @@ import Topbar from "./Topbar";
 import GMap from "../components/Map/GoogleMap";
 import styled from "styled-components";
 import fire from "../firebase";
+import EventLog from "./EventLog";
 
 const DashCont = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ const DashboardFin = () => {
       <DashCont>
         <SidebarDash />
         <GMap />
+        <EventLog />
       </DashCont>
     </>
   );

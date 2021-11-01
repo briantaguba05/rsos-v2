@@ -90,7 +90,7 @@ const SidebarDash = () => {
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarLink to="">
+              <SidebarLink onClick={handleLogout}>
                 <SidebarListItem>
                   <ExitToApp SidebarIcon onClick={handleLogout} />
                   Logout

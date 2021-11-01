@@ -225,12 +225,26 @@ class LocationSearchModal extends React.Component {
     const AsyncMap = withScriptjs(
       withGoogleMap((props) => (
         <GoogleMap
+
+          
           defaultZoom={this.state.zoom}
           defaultCenter={{
             lat: this.state.mapPosition.lat,
             lng: this.state.mapPosition.lng,
           }}
         >
+          {/* For Auto complete Search Box */}
+          <Autocomplete
+            style={{
+              width: "100%",
+              height: "40px",
+              paddingLeft: "16px",
+              marginTop: "2px",
+              marginBottom: "2rem",
+            }}
+            onPlaceSelected={this.onPlaceSelected}
+            types={["(regions)"]}
+          />
           {/* InfoWindow on top of marker */}
 
           {/*Marker*/}
@@ -267,18 +281,7 @@ class LocationSearchModal extends React.Component {
                             <div>Hello There!</div>
                         </MarkerWithLabel> */}
 
-          {/* For Auto complete Search Box */}
-          <Autocomplete
-            style={{
-              width: "100%",
-              height: "40px",
-              paddingLeft: "16px",
-              marginTop: "2px",
-              marginBottom: "2rem",
-            }}
-            onPlaceSelected={this.onPlaceSelected}
-            types={["(regions)"]}
-          />
+          
         </GoogleMap>
       ))
     );
@@ -290,7 +293,7 @@ class LocationSearchModal extends React.Component {
           margin: " auto",
           width: "100%",
           flexFlow: "row nowrap",
-          /*justifyContent: "center",*/
+          justifyContent: "center",
         }}
       >
         {/*<h1>Google Map Basic</h1>
