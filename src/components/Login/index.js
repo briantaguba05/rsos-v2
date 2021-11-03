@@ -5,9 +5,10 @@ import { Link, useHistory } from "react-router-dom";
 import Navbar from "../Navbar";
 import ScrollToTop from "../ScrollToTop";
 import { Filler } from "../About/AboutElements";
-import Footer from "../Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 import { signInWithGoogle } from "../../firebase";
+import Select from "react-select";
 
 const Login = () => {
   const emailRef = useRef();
@@ -17,33 +18,127 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const handleChange = (options) => {
+    setSelectedOptions(options);
+  };
+
+  const loginOptions = [
+    { value: "User", label: "Login as User" },
+    { value: "Admin", label: "Login as Admin" },
+    { value: "Family", label: "Login as Family" },
+  ];
+
   async function handleSubmit(e) {
     e.preventDefault();
 
-    try {
-      setError("");
-      setLoading(true);
-      await login(emailRef.current.value, passwordRef.current.value);
-      history.push("/dashboard");
-    } catch {
-      setError("Please check your email and password!");
+    if (selectedOptions.value === "User") {
+      try {
+        setError("");
+        setLoading(true);
+        await login(emailRef.current.value, passwordRef.current.value);
+        history.push("/dashboard");
+      } catch {
+        setError("Please check your email and password!");
+      }
+    } else if (selectedOptions.value === "Family") {
+      try {
+        setError("");
+        setLoading(true);
+        await login(emailRef.current.value, passwordRef.current.value);
+        history.push("/family/dashboard");
+      } catch {
+        setError("Please check your email and password!");
+      }
+    } else if (selectedOptions.value === "Admin") {
+      try {
+        setError("");
+        setLoading(true);
+        await login(emailRef.current.value, passwordRef.current.value);
+        history.push("/admin/dashboard");
+      } catch {
+        setError("Please check your email and password!");
+      }
+
+      setLoading(false);
     }
-
-    setLoading(false);
   }
-  const LoginContainer = styled.div`
-    margin: auto;
-    width: 50%;
-    align-items: center;
-  `;
 
-  const GoogleButton = styled.button`
+  const [agree, setAgree] = useState(false);
+  const [value, setValue] = useState("");
+
+  const checkboxHandler = () => {
+    setAgree(!agree);
+  };
+
+  return (
+    <>
+      <Navbar />
+      <ScrollToTop />
+      <Filler />
+
+      <Card>
+        <Card.Body>
+          <h2 className="text-center mb-4">Log In</h2>
+          {error && <Alert variant="danger">{error}</Alert>}
+          <Form onSubmit={handleSubmit}>
+            <Form.Group id="email">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" ref={emailRef} required />
+            </Form.Group>
+            <Form.Group id="password">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" ref={passwordRef} required />
+            </Form.Group>
+            <div>
+              <input type="checkbox" id="agree" onChange={checkboxHandler} />
+              <label htmlFor="agree">
+                I agree to{" "}
+                <b>
+                  <Link to="/termsconditions">terms and conditions</Link> and{" "}
+                  <Link to="/privacypolicy">privacy policy</Link>
+                </b>
+              </label>
+            </div>
+            <h3>---test panel below---</h3>
+            <h3>Choose Login Method Below</h3>
+            <Select
+              options={loginOptions}
+              value={selectedOptions}
+              onChange={handleChange}
+            />
+            <Button disabled={!agree} className="w-100" type="submit">
+              Log In
+            </Button>
+
+            {/*<GoogleButton disabled={!agree} onClick={signInWithGoogle}>
+              SIGN IN WITH GOOGLE
+            </GoogleButton>*/}
+          </Form>
+          <div className="w-100 text-center mt-3">
+            <Link to="/forgotpassword">Forgot Password?</Link>
+          </div>
+        </Card.Body>
+      </Card>
+      <div className="w-100 text-center mt-2">
+        Need an account? <Link to="/signup">Sign Up</Link>
+      </div>
+      <br></br>
+    </>
+  );
+};
+
+export default Login;
+
+/*const GoogleButton = styled.button`
     transition: background-color .3s, box-shadow .3s;
     
     padding: 12px 16px 12px 42px;
     border: none;
     border-radius: 3px;
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    width: auto;
+    height: auto;
     
     color: #757575;
     font-size: 14px;
@@ -77,49 +172,4 @@ const Login = () => {
       box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
       cursor: not-allowed;
     }
-  }
-
-`;
-
-  return (
-    <>
-      <Navbar />
-      <ScrollToTop />
-      <Filler />
-      <LoginContainer>
-        <Card>
-          <Card.Body>
-            <h2 className="text-center mb-4">Log In</h2>
-            {error && <Alert variant="danger">{error}</Alert>}
-            <Form onSubmit={handleSubmit}>
-              <Form.Group id="email">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" ref={emailRef} required />
-              </Form.Group>
-              <Form.Group id="password">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" ref={passwordRef} required />
-              </Form.Group>
-              <Button disabled={loading} className="w-100" type="submit">
-                Log In
-              </Button>
-              <GoogleButton onClick={signInWithGoogle}>
-                SIGN IN WITH GOOGLE
-              </GoogleButton>
-            </Form>
-            <div className="w-100 text-center mt-3">
-              <Link to="/forgotpassword">Forgot Password?</Link>
-            </div>
-          </Card.Body>
-        </Card>
-        <div className="w-100 text-center mt-2">
-          Need an account? <Link to="/signup">Sign Up</Link>
-        </div>
-        <br></br>
-      </LoginContainer>
-      <Footer />
-    </>
-  );
-};
-
-export default Login;
+  }*/

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useAuth } from "../components/AuthContext";
+import { useAuth } from "../../components/AuthContext";
 import { Link, useHistory } from "react-router-dom";
-import Popup from "../components/Popup";
 import {
   LineStyle,
   PermIdentity,
@@ -67,7 +66,6 @@ const SidebarDash = () => {
               </SidebarLink>
 
               <SidebarLink onClick={togglePopup}>
-                
                 <SidebarListItem>
                   <Cloud SidebarIcon />
                   Weather

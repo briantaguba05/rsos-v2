@@ -5,7 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 import Navbar from "../Navbar";
 import { Filler } from "../About/AboutElements";
 import ScrollToTop from "../ScrollToTop";
-import Footer from "../Footer";
+import styled from "styled-components";
 
 const Signup = () => {
   const emailRef = useRef();
@@ -35,11 +35,21 @@ const Signup = () => {
     setLoading(false);
   }
 
+  const [agree, setAgree] = useState(false);
+
+  const checkboxHandler = () => {
+    // if agree === true, it will be set to false
+    // if agree === false, it will be set to true
+    setAgree(!agree);
+    // Don't miss the exclamation mark
+  };
+
   return (
     <>
       <Navbar />
       <Filler />
       <ScrollToTop />
+
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
@@ -61,7 +71,20 @@ const Signup = () => {
               <Form.Control type="password" ref={passwordConfirmRef} required />
             </Form.Group>
 
-            <Button disabled={loading} className="w-100" type="submit">
+            <div>
+              <input type="checkbox" id="agree" onChange={checkboxHandler} />
+
+              <label htmlFor="agree">
+                {" "}
+                I agree to{" "}
+                <b>
+                  <Link to="/termsconditions">terms and conditions</Link> and{" "}
+                  <Link to="/privacypolicy">privacy policy</Link>
+                </b>
+              </label>
+            </div>
+
+            <Button disabled={!agree} className="w-100" type="submit">
               Sign Up
             </Button>
           </Form>
@@ -71,7 +94,6 @@ const Signup = () => {
         Already have an account? <Link to="/signin">Log In</Link>
       </div>
       <br></br>
-      <Footer />
     </>
   );
 };

@@ -31,10 +31,6 @@ const Weather = () => {
     }
   };
 
-  useEffect(() => {
-    fetchWeather();
-  }, [latitude, longitude]);
-
   return (
     <>
       <div className="weather">

@@ -9,7 +9,7 @@
   margin: auto;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 80%;
 }
 
 .card {
@@ -19,8 +19,10 @@
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
-  background-clip: border-box;
-  border-radius: .25rem;
+  margin: auto;
+    width: 50%;
+    align-items: center;
+  
 }
 
 .all__news {

@@ -4,7 +4,6 @@ import SidebarDash from "./SidebarDash";
 import Topbar from "./Topbar";
 import GMap from "../components/Map/GoogleMap";
 import styled from "styled-components";
-import fire from "../firebase";
 import EventLog from "./EventLog";
 
 const DashCont = styled.div`
@@ -12,9 +11,6 @@ const DashCont = styled.div`
   margin-top: 10px;
 `;
 const DashboardFin = () => {
-  const handleLogout = () => {
-    fire.auth().signOut();
-  };
   return (
     <>
       <ScrollToTop />
