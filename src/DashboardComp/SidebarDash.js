@@ -6,7 +6,6 @@ import {
   LineStyle,
   PermIdentity,
   Note,
-  People,
   Cloud,
   Settings,
   ExitToApp,
@@ -81,10 +80,6 @@ const SidebarDash = () => {
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarListItem>
-                <People SidebarIcon />
-                TEAMS
-              </SidebarListItem>
             </SidebarList>
           </SidebarMenu>
 

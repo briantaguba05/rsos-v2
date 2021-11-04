@@ -37,7 +37,7 @@ const Login = () => {
         setError("");
         setLoading(true);
         await login(emailRef.current.value, passwordRef.current.value);
-        history.push("/dashboard");
+        history.push("/dashboard/user");
       } catch {
         setError("Please check your email and password!");
       }
@@ -46,7 +46,7 @@ const Login = () => {
         setError("");
         setLoading(true);
         await login(emailRef.current.value, passwordRef.current.value);
-        history.push("/family/dashboard");
+        history.push("/dashboard/family");
       } catch {
         setError("Please check your email and password!");
       }
@@ -55,7 +55,7 @@ const Login = () => {
         setError("");
         setLoading(true);
         await login(emailRef.current.value, passwordRef.current.value);
-        history.push("/admin/dashboard");
+        history.push("/dashboard/admin");
       } catch {
         setError("Please check your email and password!");
       }

@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../../components/AuthContext";
 import { Link, useHistory } from "react-router-dom";
-import {
-  LineStyle,
-  PermIdentity,
-  Note,
-  People,
-  Cloud,
-  Settings,
-  ExitToApp,
-} from "@material-ui/icons";
+import { LineStyle, PermIdentity, ExitToApp } from "@material-ui/icons";
 
 import {
   SidebarContainer,
@@ -57,46 +49,18 @@ const SidebarDash = () => {
                   Dashboard
                 </SidebarListItem>
               </SidebarLink>
-
               <SidebarLink to="/myinfo">
                 <SidebarListItem active>
                   <PermIdentity SidebarIcon />
                   UserInfo
                 </SidebarListItem>
               </SidebarLink>
-
-              <SidebarLink onClick={togglePopup}>
-                
-                <SidebarListItem>
-                  <Cloud SidebarIcon />
-                  Weather
-                </SidebarListItem>
-              </SidebarLink>
-
-              <SidebarLink to="news">
-                <SidebarListItem>
-                  <Note SidebarIcon />
-                  NEWS
-                </SidebarListItem>
-              </SidebarLink>
-
-              <SidebarListItem>
-                <People SidebarIcon />
-                TEAMS
-              </SidebarListItem>
             </SidebarList>
           </SidebarMenu>
 
           <SidebarMenu>
             <SidebarTitle>TITLE #2</SidebarTitle>
             <SidebarList>
-              <SidebarLink to="">
-                <SidebarListItem>
-                  <Settings SidebarIcon />
-                  Settings
-                </SidebarListItem>
-              </SidebarLink>
-
               <SidebarLink onClick={handleLogout}>
                 <SidebarListItem>
                   <ExitToApp SidebarIcon onClick={handleLogout} />

@@ -14,7 +14,6 @@ export default class DashboardFamily extends Component {
   render() {
     return (
       <>
-        <h3>THIS IS FAMILY DASHBOARD</h3>
         <ScrollToTop />
         <Topbar />
         <DashCont>

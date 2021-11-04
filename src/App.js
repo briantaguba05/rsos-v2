@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FirstAid from "./components/Tutorials/firstaid";
 import HandGuide from "./components/Tutorials/handguide";
 import Techniques from "./components/Tutorials/techniques";
-import Dashboard from "./DashboardComp/DashboardFin";
+import Dashboard from "./DashboardComp/DashboardUser";
 import About from "./components/About/About";
 import Download from "./components/Download/Download";
 import Functions from "./components/Functions/Functions";
@@ -22,10 +22,9 @@ import Weather from "./components/Weather/Weather";
 import ProtectRoute from "./components/ProtectRoute";
 import News from "./components/News/News";
 import { NewsContextProvider } from "./components/News/NewsContext";
-import Authorization from "././DashboardComp/Authorization";
 import AdminDashboard from "./DashboardComp/DashboardAdmin/DashboardAdmin";
 import FamilyDashboard from "./DashboardComp/DashboardFamily/DashboardFamily";
-import UserDashboard from "./DashboardComp/DashboardFamily/DashboardFamily";
+import UserDashboard from "./DashboardComp/DashboardUser/DashboardUser";
 
 class App extends Component {
   state = {
@@ -48,63 +47,66 @@ class App extends Component {
     } = this.state;
 
     return (
-      <Router>
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/forgotpassword" component={ForgotPass} exact />
-          <Route path="/firstaid" component={FirstAid} exact />
-          <Route path="/handguide" component={HandGuide} exact />
-          <Route path="/techniques" component={Techniques} exact />
-
-          <Route path="/about" component={About} exact />
-          <Route path="/download" component={Download} exact />
-          <Route path="/functions" component={Functions} exact />
-
-          <Route path="/privacypolicy" component={PrivacyPolicy} exact />
-          <Route path="/termsconditions" component={TermsConditions} exact />
-
+      <div>
+        <Router>
           <Switch>
-            <AuthProvider>
-              <ProtectRoute path="/signup" component={SignUp} />
-              <ProtectRoute path="/signin" component={Login} exact />
-              <PrivateRoute path="/dashboard" component={Dashboard} exact />
-              <PrivateRoute path="/myinfo" component={MyInfo} />
-              <PrivateRoute path="/weather" component={Weather} exact />
-              <NewsContextProvider>
-                <PrivateRoute path="/news" component={News} exact />
-              </NewsContextProvider>
+            <Route path="/" component={Home} exact />
+            <Route path="/forgotpassword" component={ForgotPass} exact />
+            <Route path="/firstaid" component={FirstAid} exact />
+            <Route path="/handguide" component={HandGuide} exact />
+            <Route path="/techniques" component={Techniques} exact />
 
-              <PrivateRoute
-                path="/admin/dashboard"
-                component={Authorization(
-                  AdminDashboard,
-                  [...adminAuthDashboards],
-                  userType
-                )}
-              />
-              <PrivateRoute
-                path="/family/dashboard"
-                component={Authorization(
-                  FamilyDashboard,
-                  [...familyAuthDashboards],
-                  userType
-                )}
-              />
-              <PrivateRoute
-                path="/user/dashboard"
-                component={Authorization(
-                  UserDashboard,
-                  [...userAuthDashboards],
-                  userType
-                )}
-              />
-            </AuthProvider>
+            <Route path="/about" component={About} exact />
+            <Route path="/download" component={Download} exact />
+            <Route path="/functions" component={Functions} exact />
+
+            <Route path="/privacypolicy" component={PrivacyPolicy} exact />
+            <Route path="/termsconditions" component={TermsConditions} exact />
+
+            <Switch>
+              <AuthProvider>
+                <ProtectRoute path="/signup" component={SignUp} />
+                <ProtectRoute path="/signin" component={Login} exact />
+                <PrivateRoute path="/dashboard" component={Dashboard} exact />
+                <PrivateRoute path="/dashboard/myinfo" component={MyInfo} />
+                <PrivateRoute path="/admin/weather" component={Weather} exact />
+                <NewsContextProvider>
+                  <PrivateRoute path="/dashboard/news" component={News} exact />
+                </NewsContextProvider>
+
+                <PrivateRoute
+                  path="/dashboard/admin"
+                  component={AdminDashboard}
+                />
+                <PrivateRoute
+                  path="/dashboard/family"
+                  component={FamilyDashboard}
+                />
+                <PrivateRoute
+                  path="/dashboard/user"
+                  component={UserDashboard}
+                />
+              </AuthProvider>
+            </Switch>
+            <Route path="" component={PageNotFound} />
           </Switch>
-          <Route path="" component={PageNotFound} />
-        </Switch>
-      </Router>
+        </Router>
+      </div>
     );
   }
 }
 
 export default App;
+
+/*
+
+<PrivateRoute
+                  path="/dashboard/user"
+                  component={Authorization(
+                    UserDashboard,
+                    [...userAuthDashboards],
+                    userType
+                  )}
+                />
+                
+                */

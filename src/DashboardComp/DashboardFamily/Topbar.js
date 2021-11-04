@@ -20,7 +20,7 @@ const Topbar = () => {
       <TopbarContainer>
         <TopbarWrapper>
           <TopLeft>
-            <TopbarLogo>Welcome {currentUser.email}</TopbarLogo>
+            <TopbarLogo>Welcome Family Member!</TopbarLogo>
           </TopLeft>
 
           <TopRight>

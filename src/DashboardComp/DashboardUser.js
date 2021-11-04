@@ -10,7 +10,7 @@ const DashCont = styled.div`
   display: flex;
   margin-top: 10px;
 `;
-const DashboardFin = () => {
+const DashboardUser = () => {
   return (
     <>
       <ScrollToTop />
@@ -24,4 +24,4 @@ const DashboardFin = () => {
   );
 };
 
-export default DashboardFin;
+export default DashboardUser;
