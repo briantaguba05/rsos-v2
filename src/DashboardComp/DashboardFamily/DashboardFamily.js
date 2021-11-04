@@ -6,6 +6,9 @@ import GMap from "../../components/Map/GoogleMap";
 import styled from "styled-components";
 import EventLog from "./EventLogFamily";
 
+const DashMain = styled.div`
+  justify-content: center;
+`;
 const DashCont = styled.div`
   display: flex;
   margin-top: 10px;
@@ -14,13 +17,19 @@ export default class DashboardFamily extends Component {
   render() {
     return (
       <>
-        <ScrollToTop />
-        <Topbar />
-        <DashCont>
-          <SidebarDash />
-          <GMap />
-          <EventLog />
-        </DashCont>
+        <DashMain>
+          <ScrollToTop />
+          <Topbar />
+
+          <DashCont>
+            <SidebarDash />
+            <GMap />
+          </DashCont>
+
+          <DashCont>
+            <EventLog />
+          </DashCont>
+        </DashMain>
       </>
     );
   }

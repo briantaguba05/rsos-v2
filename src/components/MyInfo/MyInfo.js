@@ -45,6 +45,7 @@ const MyInfo = () => {
     <>
       <Card>
         <Card.Body>
+          <h3 className="text-center mb-4">THIS IS BASIC MYINFO PAGE</h3>
           <h2 className="text-center mb-4">Update Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>

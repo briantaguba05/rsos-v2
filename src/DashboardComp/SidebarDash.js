@@ -51,14 +51,14 @@ const SidebarDash = () => {
           <SidebarMenu>
             <SidebarTitle>Dashboard</SidebarTitle>
             <SidebarList>
-              <SidebarLink to="/dashboard">
+              <SidebarLink to="/dashboard/user">
                 <SidebarListItem activeClass="active">
                   <LineStyle SidebarIcon />
-                  Dashboard
+                  User Dashboard
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarLink to="/myinfo">
+              <SidebarLink to="/dashboard/user/myinfo">
                 <SidebarListItem active>
                   <PermIdentity SidebarIcon />
                   UserInfo
@@ -66,7 +66,6 @@ const SidebarDash = () => {
               </SidebarLink>
 
               <SidebarLink onClick={togglePopup}>
-                
                 <SidebarListItem>
                   <Cloud SidebarIcon />
                   Weather
@@ -79,7 +78,6 @@ const SidebarDash = () => {
                   NEWS
                 </SidebarListItem>
               </SidebarLink>
-
             </SidebarList>
           </SidebarMenu>
 

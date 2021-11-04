@@ -17,7 +17,10 @@ import Login from "./components/Login/index";
 import { AuthProvider } from "./components/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPass from "./components/ForgotPass";
-import MyInfo from "./components/MyInfo";
+import MyInfoAdmin from "./components/MyInfo/MyInfoAdmin";
+import MyInfoFamily from "./components/MyInfo/MyInfoFamily";
+import MyInfoUser from "./components/MyInfo/MyInfoUser";
+import MyInfo from "./components/MyInfo/MyInfo";
 import Weather from "./components/Weather/Weather";
 import ProtectRoute from "./components/ProtectRoute";
 import News from "./components/News/News";
@@ -63,31 +66,40 @@ class App extends Component {
             <Route path="/privacypolicy" component={PrivacyPolicy} exact />
             <Route path="/termsconditions" component={TermsConditions} exact />
 
-            <Switch>
-              <AuthProvider>
-                <ProtectRoute path="/signup" component={SignUp} />
-                <ProtectRoute path="/signin" component={Login} exact />
-                <PrivateRoute path="/dashboard" component={Dashboard} exact />
-                <PrivateRoute path="/dashboard/myinfo" component={MyInfo} />
-                <PrivateRoute path="/admin/weather" component={Weather} exact />
-                <NewsContextProvider>
-                  <PrivateRoute path="/dashboard/news" component={News} exact />
-                </NewsContextProvider>
+            <AuthProvider>
+              <ProtectRoute path="/signup" component={SignUp} />
+              <ProtectRoute path="/signin" component={Login} exact />
+              <PrivateRoute path="/dashboard" component={Dashboard} exact />
+              <PrivateRoute path="/dashboard/myinfo" component={MyInfo} />
+              <PrivateRoute path="/admin/weather" component={Weather} exact />
+              <NewsContextProvider>
+                <PrivateRoute path="/dashboard/news" component={News} exact />
+              </NewsContextProvider>
 
-                <PrivateRoute
-                  path="/dashboard/admin"
-                  component={AdminDashboard}
-                />
-                <PrivateRoute
-                  path="/dashboard/family"
-                  component={FamilyDashboard}
-                />
-                <PrivateRoute
-                  path="/dashboard/user"
-                  component={UserDashboard}
-                />
-              </AuthProvider>
-            </Switch>
+              <PrivateRoute
+                path="/dashboard/admin"
+                component={AdminDashboard}
+              />
+              <PrivateRoute
+                path="/dashboard/family"
+                component={FamilyDashboard}
+              />
+              <PrivateRoute path="/dashboard/user" component={UserDashboard} />
+
+              <PrivateRoute
+                path="/dashboard/admin/myinfo"
+                component={MyInfoAdmin}
+              />
+              <PrivateRoute
+                path="/dashboard/family/myinfo"
+                component={MyInfoFamily}
+              />
+              <PrivateRoute
+                path="/dashboard/user/myinfo"
+                component={MyInfoUser}
+              />
+            </AuthProvider>
+
             <Route path="" component={PageNotFound} />
           </Switch>
         </Router>

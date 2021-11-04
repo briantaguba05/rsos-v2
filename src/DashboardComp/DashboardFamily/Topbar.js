@@ -24,16 +24,6 @@ const Topbar = () => {
           </TopLeft>
 
           <TopRight>
-            <TopbarIconContainer>
-              <NotificationsNone />
-              <TopIconBadge>2</TopIconBadge>
-            </TopbarIconContainer>
-
-            <TopbarIconContainer>
-              <Language />
-              <TopIconBadge>2</TopIconBadge>
-            </TopbarIconContainer>
-
             <Avatar
               name={currentUser.name}
               googleID={currentUser.userID}

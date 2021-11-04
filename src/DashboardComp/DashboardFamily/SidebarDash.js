@@ -41,26 +41,21 @@ const SidebarDash = () => {
       <SidebarContainer>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarTitle>Dashboard</SidebarTitle>
+            <SidebarTitle>Family Dashboard</SidebarTitle>
             <SidebarList>
-              <SidebarLink to="/dashboard">
+              <SidebarLink to="/dashboard/family">
                 <SidebarListItem activeClass="active">
                   <LineStyle SidebarIcon />
                   Dashboard
                 </SidebarListItem>
               </SidebarLink>
-              <SidebarLink to="/myinfo">
+              <SidebarLink to="/dashboard/family/myinfo">
                 <SidebarListItem active>
                   <PermIdentity SidebarIcon />
                   UserInfo
                 </SidebarListItem>
               </SidebarLink>
-            </SidebarList>
-          </SidebarMenu>
 
-          <SidebarMenu>
-            <SidebarTitle>TITLE #2</SidebarTitle>
-            <SidebarList>
               <SidebarLink onClick={handleLogout}>
                 <SidebarListItem>
                   <ExitToApp SidebarIcon onClick={handleLogout} />

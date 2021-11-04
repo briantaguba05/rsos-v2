@@ -51,14 +51,14 @@ const SidebarDash = () => {
           <SidebarMenu>
             <SidebarTitle>Dashboard</SidebarTitle>
             <SidebarList>
-              <SidebarLink to="/dashboard">
+              <SidebarLink to="/dashboard/admin">
                 <SidebarListItem activeClass="active">
                   <LineStyle SidebarIcon />
                   Dashboard
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarLink to="/myinfo">
+              <SidebarLink to="/dashboard/admin/myinfo">
                 <SidebarListItem active>
                   <PermIdentity SidebarIcon />
                   UserInfo
