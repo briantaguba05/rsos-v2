@@ -76,6 +76,7 @@ class App extends Component {
                 <PrivateRoute path="/dashboard/news" component={News} exact />
               </NewsContextProvider>
 
+
               <PrivateRoute
                 path="/dashboard/admin"
                 component={AdminDashboard}
@@ -90,10 +91,7 @@ class App extends Component {
                 path="/dashboard/admin/myinfo"
                 component={MyInfoAdmin}
               />
-              <PrivateRoute
-                path="/dashboard/family/myinfo"
-                component={MyInfoFamily}
-              />
+              <PrivateRoute path="/family/myinfo" component={MyInfoFamily} />
               <PrivateRoute
                 path="/dashboard/user/myinfo"
                 component={MyInfoUser}

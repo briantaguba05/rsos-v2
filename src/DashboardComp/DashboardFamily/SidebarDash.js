@@ -49,7 +49,7 @@ const SidebarDash = () => {
                   Dashboard
                 </SidebarListItem>
               </SidebarLink>
-              <SidebarLink to="/dashboard/family/myinfo">
+              <SidebarLink to="/family/myinfo">
                 <SidebarListItem active>
                   <PermIdentity SidebarIcon />
                   UserInfo

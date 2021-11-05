@@ -5,8 +5,16 @@ import Topbar from "./Topbar";
 import GMap from "../../components/Map/GoogleMap";
 import styled from "styled-components";
 import EventLog from "./EventLogAdmin";
+import AdminConfirmUser from "./AdminConfirmUser";
 
+const DashMainAdmin = styled.div`
+  margin: auto;
+  justify-content: center;
+`;
 const DashCont = styled.div`
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
   display: flex;
   margin-top: 10px;
 `;
@@ -15,13 +23,17 @@ export default class DashboardAdmin extends Component {
     return (
       <>
         <h3>THIS IS ADMIN DASHBOARD</h3>
-        <ScrollToTop />
-        <Topbar />
-        <DashCont>
-          <SidebarDash />
-          <GMap />
-          <EventLog />
-        </DashCont>
+
+        <DashMainAdmin>
+          <ScrollToTop />
+          <Topbar />
+
+          <DashCont>
+            <SidebarDash />
+            <GMap />
+            <AdminConfirmUser />
+          </DashCont>
+        </DashMainAdmin>
       </>
     );
   }

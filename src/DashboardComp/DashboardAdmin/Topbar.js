@@ -37,7 +37,7 @@ const Topbar = () => {
             <Avatar
               name={currentUser.name}
               googleID={currentUser.userID}
-              size="50"
+              size="40"
               round={true}
             />
           </TopRight>
