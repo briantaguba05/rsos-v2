@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import Home from "./pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -28,82 +28,76 @@ import { NewsContextProvider } from "./components/News/NewsContext";
 import AdminDashboard from "./DashboardComp/DashboardAdmin/DashboardAdmin";
 import FamilyDashboard from "./DashboardComp/DashboardFamily/DashboardFamily";
 import UserDashboard from "./DashboardComp/DashboardUser/DashboardUser";
+import AdminEdit from "./DashboardComp/DashboardAdmin/EditUser";
+import AdminShow from "./DashboardComp/DashboardAdmin/ShowUser";
+import AdminCreate from "./DashboardComp/DashboardAdmin/CreateUser";
+import AdminList from "./DashboardComp/DashboardAdmin/ListUser";
 
-class App extends Component {
-  state = {
-    userType: "none",
-    adminAuthDashboards: ["Admin"],
-    familyAuthDashboards: ["Family", "Admin"],
-    userAuthDashboards: ["Family", "Admin", "User"],
-  };
-  selectUserType = (userType) => {
-    this.setState({
-      userType: userType,
-    });
-  };
-  render() {
-    const {
-      userType,
-      adminAuthDashboards,
-      familyAuthDashboards,
-      userAuthDashboards,
-    } = this.state;
+function App() {
+  return (
+    <div>
+      <Router>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/forgotpassword" component={ForgotPass} exact />
+          <Route path="/firstaid" component={FirstAid} exact />
+          <Route path="/handguide" component={HandGuide} exact />
+          <Route path="/techniques" component={Techniques} exact />
 
-    return (
-      <div>
-        <Router>
-          <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/forgotpassword" component={ForgotPass} exact />
-            <Route path="/firstaid" component={FirstAid} exact />
-            <Route path="/handguide" component={HandGuide} exact />
-            <Route path="/techniques" component={Techniques} exact />
+          <Route path="/about" component={About} exact />
+          <Route path="/download" component={Download} exact />
+          <Route path="/functions" component={Functions} exact />
 
-            <Route path="/about" component={About} exact />
-            <Route path="/download" component={Download} exact />
-            <Route path="/functions" component={Functions} exact />
+          <Route path="/privacypolicy" component={PrivacyPolicy} exact />
+          <Route path="/termsconditions" component={TermsConditions} exact />
 
-            <Route path="/privacypolicy" component={PrivacyPolicy} exact />
-            <Route path="/termsconditions" component={TermsConditions} exact />
+          <AuthProvider>
+            <ProtectRoute path="/signup" component={SignUp} />
+            <ProtectRoute path="/signin" component={Login} exact />
+            <PrivateRoute path="/dashboard" component={Dashboard} exact />
+            <PrivateRoute path="/dashboard/myinfo" component={MyInfo} />
+            <PrivateRoute path="/weather" component={Weather} exact />
+            <NewsContextProvider>
+              <PrivateRoute path="/news" component={News} exact />
+            </NewsContextProvider>
 
-            <AuthProvider>
-              <ProtectRoute path="/signup" component={SignUp} />
-              <ProtectRoute path="/signin" component={Login} exact />
-              <PrivateRoute path="/dashboard" component={Dashboard} exact />
-              <PrivateRoute path="/dashboard/myinfo" component={MyInfo} />
-              <PrivateRoute path="/admin/weather" component={Weather} exact />
-              <NewsContextProvider>
-                <PrivateRoute path="/dashboard/news" component={News} exact />
-              </NewsContextProvider>
+            <PrivateRoute path="/dashboard/admin" component={AdminDashboard} />
+            <PrivateRoute
+              path="/dashboard/family"
+              component={FamilyDashboard}
+            />
+            <PrivateRoute path="/dashboard/user" component={UserDashboard} />
 
+            <PrivateRoute
+              path="/dashboard/admin/myinfo"
+              component={MyInfoAdmin}
+            />
+            <PrivateRoute path="/family/myinfo" component={MyInfoFamily} />
+            <PrivateRoute
+              path="/dashboard/user/myinfo"
+              component={MyInfoUser}
+            />
 
-              <PrivateRoute
-                path="/dashboard/admin"
-                component={AdminDashboard}
-              />
-              <PrivateRoute
-                path="/dashboard/family"
-                component={FamilyDashboard}
-              />
-              <PrivateRoute path="/dashboard/user" component={UserDashboard} />
+            <PrivateRoute
+              path="/dashboard/admin/edit/:id"
+              component={AdminEdit}
+            />
+            <PrivateRoute
+              path="/dashboard/admin/create"
+              component={AdminCreate}
+            />
+            <PrivateRoute
+              path="/dashboard/admin/show/:id"
+              component={AdminShow}
+            />
+            <PrivateRoute path="/dashboard/admin/list" component={AdminList} />
+          </AuthProvider>
 
-              <PrivateRoute
-                path="/dashboard/admin/myinfo"
-                component={MyInfoAdmin}
-              />
-              <PrivateRoute path="/family/myinfo" component={MyInfoFamily} />
-              <PrivateRoute
-                path="/dashboard/user/myinfo"
-                component={MyInfoUser}
-              />
-            </AuthProvider>
-
-            <Route path="" component={PageNotFound} />
-          </Switch>
-        </Router>
-      </div>
-    );
-  }
+          <Route path="" component={PageNotFound} />
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
 export default App;

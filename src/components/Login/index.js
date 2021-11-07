@@ -100,7 +100,6 @@ const Login = () => {
                 </b>
               </label>
             </div>
-            <h3>---test panel below---</h3>
             <h3>Choose Login Method Below</h3>
             <Select
               options={loginOptions}

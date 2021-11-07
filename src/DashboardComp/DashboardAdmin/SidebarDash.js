@@ -49,7 +49,7 @@ const SidebarDash = () => {
       <SidebarContainer>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarTitle>Dashboard</SidebarTitle>
+            <SidebarTitle>Admin Panel</SidebarTitle>
             <SidebarList>
               <SidebarLink to="/dashboard/admin">
                 <SidebarListItem activeClass="active">
@@ -58,29 +58,14 @@ const SidebarDash = () => {
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarLink to="/dashboard/admin/myinfo">
+              <SidebarLink to="/dashboard/admin/list">
                 <SidebarListItem active>
                   <PermIdentity SidebarIcon />
-                  UserInfo
+                  List Members
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarLink onClick={togglePopup}>
-                
-                <SidebarListItem>
-                  <Cloud SidebarIcon />
-                  Weather
-                </SidebarListItem>
-              </SidebarLink>
-
-              <SidebarLink to="news">
-                <SidebarListItem>
-                  <Note SidebarIcon />
-                  NEWS
-                </SidebarListItem>
-              </SidebarLink>
-
-              <SidebarListItem>
+              <SidebarListItem to="/teams">
                 <People SidebarIcon />
                 TEAMS
               </SidebarListItem>
@@ -90,6 +75,20 @@ const SidebarDash = () => {
           <SidebarMenu>
             <SidebarTitle>TITLE #2</SidebarTitle>
             <SidebarList>
+              <SidebarLink to="/weather">
+                <SidebarListItem>
+                  <Cloud SidebarIcon />
+                  Weather
+                </SidebarListItem>
+              </SidebarLink>
+
+              <SidebarLink to="/news">
+                <SidebarListItem>
+                  <Note SidebarIcon />
+                  NEWS
+                </SidebarListItem>
+              </SidebarLink>
+
               <SidebarLink to="">
                 <SidebarListItem>
                   <Settings SidebarIcon />

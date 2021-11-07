@@ -6,6 +6,9 @@ import GMap from "../../components/Map/GoogleMap";
 import styled from "styled-components";
 import EventLog from "./EventLogAdmin";
 import AdminConfirmUser from "./AdminConfirmUser";
+import GetUser from "./GetUser";
+import ListUser from "./ListUser";
+import ShowUser from "./ShowUser";
 
 const DashMainAdmin = styled.div`
   margin: auto;
@@ -22,8 +25,6 @@ export default class DashboardAdmin extends Component {
   render() {
     return (
       <>
-        <h3>THIS IS ADMIN DASHBOARD</h3>
-
         <DashMainAdmin>
           <ScrollToTop />
           <Topbar />
@@ -31,7 +32,6 @@ export default class DashboardAdmin extends Component {
           <DashCont>
             <SidebarDash />
             <GMap />
-            <AdminConfirmUser />
           </DashCont>
         </DashMainAdmin>
       </>

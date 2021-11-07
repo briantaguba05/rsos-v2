@@ -30,8 +30,9 @@ const AdminConfirmUser = () => {
   return (
     <div>
       <center>
+        <h3>SET USER DATA</h3>
         <form
-          style={{ marginTop: "200px" }}
+          style={{ marginTop: "50px", marginBottom: "100px" }}
           onSubmit={(event) => {
             confirm(event);
           }}
