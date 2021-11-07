@@ -59,7 +59,7 @@ const SidebarDash = () => {
               </SidebarLink>
 
               <SidebarLink to="/dashboard/admin/list">
-                <SidebarListItem active>
+                <SidebarListItem>
                   <PermIdentity SidebarIcon />
                   List Members
                 </SidebarListItem>
@@ -75,7 +75,7 @@ const SidebarDash = () => {
           <SidebarMenu>
             <SidebarTitle>TITLE #2</SidebarTitle>
             <SidebarList>
-              <SidebarLink to="/weather">
+              <SidebarLink to="/dashboard/admin/weather">
                 <SidebarListItem>
                   <Cloud SidebarIcon />
                   Weather

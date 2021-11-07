@@ -56,7 +56,17 @@ function App() {
             <ProtectRoute path="/signin" component={Login} exact />
             <PrivateRoute path="/dashboard" component={Dashboard} exact />
             <PrivateRoute path="/dashboard/myinfo" component={MyInfo} />
-            <PrivateRoute path="/weather" component={Weather} exact />
+
+            <PrivateRoute
+              path="/dashboard/admin/weather"
+              component={Weather}
+              exact
+            />
+            <PrivateRoute
+              path="/dashboard/user/weather"
+              component={Weather}
+              exact
+            />
             <NewsContextProvider>
               <PrivateRoute path="/news" component={News} exact />
             </NewsContextProvider>

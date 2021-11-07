@@ -49,4 +49,7 @@ export const SidebarIcon = styled.div`
   font-size: 20px !important;
 `;
 
-export const SidebarLink = styled(Link)``;
+export const SidebarLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;

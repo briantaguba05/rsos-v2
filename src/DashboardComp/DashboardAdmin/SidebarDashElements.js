@@ -5,9 +5,8 @@ import { Link } from "react-router-dom";
 export const SidebarContainer = styled.div`
   flex: 1;
   height: calc(100vh - 50px);
-  background-color: rgb(251, 251, 255);
+  background-color: white;
   position: sticky;
-  top: 50px;
 `;
 
 export const SidebarWrapper = styled.div`
@@ -35,6 +34,8 @@ export const SidebarListItem = styled.li`
   display: flex;
   align-items: center;
   border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
 
   &.active {
     border-bottom: 3px solid #d90429;
@@ -49,4 +50,7 @@ export const SidebarIcon = styled.div`
   font-size: 20px !important;
 `;
 
-export const SidebarLink = styled(Link)``;
+export const SidebarLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;

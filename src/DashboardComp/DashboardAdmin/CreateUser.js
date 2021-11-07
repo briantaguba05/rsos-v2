@@ -67,7 +67,6 @@ class Create extends Component {
                   type="number"
                   class="form-control"
                   name="title"
-                  value={ID}
                   onChange={this.onChange}
                   placeholder="ID#"
                 />
@@ -91,7 +90,6 @@ class Create extends Component {
                   type="text"
                   class="form-control"
                   name="author"
-                  value={MotorcycleType}
                   onChange={this.onChange}
                   placeholder="Motorcycle Type/Brand"
                 />
@@ -99,10 +97,9 @@ class Create extends Component {
               <div class="form-group">
                 <label for="author">User Type:</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
                   name="author"
-                  value={UserType}
                   onChange={this.onChange}
                   placeholder="User Type"
                 />
