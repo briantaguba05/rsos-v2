@@ -39,7 +39,7 @@ class Create extends Component {
           MotorcycleType: "",
           UserType: "",
         });
-        this.props.history.push("/");
+        this.props.history.push("/dashboard/admin/list");
       })
       .catch((error) => {
         console.error("Error adding document: ", error);

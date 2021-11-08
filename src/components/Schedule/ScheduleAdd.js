@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import firebase from "../../firebase";
 
-const AdminConfirmUser = () => {
-  const [id, setId] = useState("");
-  const [motorcycleType, setMotorcycleType] = useState("");
-  const [name, setName] = useState("");
+const Schedule = () => {
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+  const [description, setDescription] = useState("");
   const [userType, setUserType] = useState("");
 
   const db = firebase.firestore();
@@ -12,15 +12,14 @@ const AdminConfirmUser = () => {
   const confirm = (e) => {
     e.preventDefault();
 
-    db.collection("adminCommand")
+    db.collection("schedule")
       .add({
-        ID: id,
-        MotorcycleType: motorcycleType,
-        Name: name,
-        UserType: userType,
+        Title: title,
+        Date: date,
+        Description: description,
       })
       .then((docRef) => {
-        this.props.history.push("/dashboard/admin/list");
+        this.props.history.push("/dashboard/admin");
         alert("Data Successfully Submitted");
       })
 
@@ -32,7 +31,7 @@ const AdminConfirmUser = () => {
   return (
     <div>
       <center>
-        <h3>SET USER DATA</h3>
+        <h3>ADD RIDE SCHEDULE</h3>
         <form
           style={{ marginTop: "50px", marginBottom: "100px" }}
           onSubmit={(event) => {
@@ -40,42 +39,35 @@ const AdminConfirmUser = () => {
           }}
         >
           <input
-            type="number"
-            placeholder="ID Number"
+            type="text"
+            placeholder="Ride Title"
             onChange={(e) => {
-              setId(e.target.value);
+              setTitle(e.target.value);
+            }}
+          />
+          <br />
+          <br />
+          <input
+            type="date"
+            placeholder="Date"
+            onChange={(e) => {
+              setDate(e.target.value);
             }}
           />
           <br />
           <br />
           <input
             type="text"
-            placeholder="Name"
+            placeholder="Ride Description"
+            size="50"
+            height="100"
             onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
-          <br />
-          <br />
-          <input
-            type="text"
-            placeholder="Motorcycle Type/Brand/Model"
-            onChange={(e) => {
-              setMotorcycleType(e.target.value);
+              setDescription(e.target.value);
             }}
           />
           <br />
           <br />
 
-          <input
-            type="number"
-            placeholder="User Type (1,2,3)"
-            onChange={(e) => {
-              setUserType(e.target.value);
-            }}
-          />
-          <br />
-          <br />
           <button type="submit">Submit</button>
         </form>
       </center>
@@ -83,4 +75,4 @@ const AdminConfirmUser = () => {
   );
 };
 
-export default AdminConfirmUser;
+export default Schedule;

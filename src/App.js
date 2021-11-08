@@ -30,8 +30,12 @@ import FamilyDashboard from "./DashboardComp/DashboardFamily/DashboardFamily";
 import UserDashboard from "./DashboardComp/DashboardUser/DashboardUser";
 import AdminEdit from "./DashboardComp/DashboardAdmin/EditUser";
 import AdminShow from "./DashboardComp/DashboardAdmin/ShowUser";
-import AdminCreate from "./DashboardComp/DashboardAdmin/CreateUser";
+import AdminCreate from "./DashboardComp/DashboardAdmin/AdminConfirmUser";
 import AdminList from "./DashboardComp/DashboardAdmin/ListUser";
+import ScheduleAdd from "./components/Schedule/ScheduleAdd";
+import ScheduleList from "./components/Schedule/ScheduleList";
+import ScheduleEdit from "./components/Schedule/ScheduleEdit";
+import ScheduleShow from "./components/Schedule/ScheduleShow";
 
 function App() {
   return (
@@ -101,6 +105,23 @@ function App() {
               component={AdminShow}
             />
             <PrivateRoute path="/dashboard/admin/list" component={AdminList} />
+
+            <PrivateRoute
+              path="/dashboard/admin/schedule/add"
+              component={ScheduleAdd}
+            />
+            <PrivateRoute
+              path="/dashboard/admin/schedule/list"
+              component={ScheduleList}
+            />
+            <PrivateRoute
+              path="/dashboard/admin/schedule/show/:id"
+              component={ScheduleShow}
+            />
+            <PrivateRoute
+              path="/dashboard/admin/schedule/edit/:id"
+              component={ScheduleEdit}
+            />
           </AuthProvider>
 
           <Route path="" component={PageNotFound} />

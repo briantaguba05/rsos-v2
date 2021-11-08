@@ -61,19 +61,21 @@ const SidebarDash = () => {
               <SidebarLink to="/dashboard/admin/list">
                 <SidebarListItem>
                   <PermIdentity SidebarIcon />
-                  List Members
+                  Members
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarListItem to="/teams">
-                <People SidebarIcon />
-                TEAMS
-              </SidebarListItem>
+              <SidebarLink to="/dashboard/admin/schedule/list">
+                <SidebarListItem>
+                  <People SidebarIcon />
+                  Schedule
+                </SidebarListItem>
+              </SidebarLink>
             </SidebarList>
           </SidebarMenu>
 
           <SidebarMenu>
-            <SidebarTitle>TITLE #2</SidebarTitle>
+            <SidebarTitle>Features</SidebarTitle>
             <SidebarList>
               <SidebarLink to="/dashboard/admin/weather">
                 <SidebarListItem>
