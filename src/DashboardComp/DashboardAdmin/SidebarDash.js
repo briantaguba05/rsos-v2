@@ -111,7 +111,7 @@ const SidebarDash = () => {
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarLink to="/news">
+              <SidebarLink to="/dashboard/admin/news">
                 <SidebarListItem>
                   <Note SidebarIcon />
                   NEWS
