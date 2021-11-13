@@ -14,13 +14,11 @@ export default class DashboardUser extends Component {
   render() {
     return (
       <>
-        <h3>THIS IS USER DASHBOARD</h3>
         <ScrollToTop />
         <Topbar />
         <DashCont>
           <SidebarDash />
           <GMap />
-          <EventLog />
         </DashCont>
       </>
     );

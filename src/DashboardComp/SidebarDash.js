@@ -65,7 +65,7 @@ const SidebarDash = () => {
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarLink onClick={togglePopup}>
+              <SidebarLink to="/dashboard/weather">
                 <SidebarListItem>
                   <Cloud SidebarIcon />
                   Weather

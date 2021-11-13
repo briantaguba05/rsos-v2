@@ -61,18 +61,23 @@ function App() {
             <PrivateRoute path="/dashboard" component={Dashboard} exact />
             <PrivateRoute path="/dashboard/myinfo" component={MyInfo} />
 
-            <PrivateRoute
-              path="/dashboard/admin/weather"
-              component={Weather}
-              exact
-            />
+            <PrivateRoute path="/dashboard/weather" component={Weather} exact />
             <PrivateRoute
               path="/dashboard/user/weather"
               component={Weather}
               exact
             />
             <NewsContextProvider>
-              <PrivateRoute path="/news" component={News} exact />
+              <PrivateRoute
+                path="/dashboard/user/news"
+                component={News}
+                exact
+              />
+              <PrivateRoute
+                path="/dashboard/admin/news"
+                component={News}
+                exact
+              />
             </NewsContextProvider>
 
             <PrivateRoute path="/dashboard/admin" component={AdminDashboard} />
@@ -120,6 +125,23 @@ function App() {
             />
             <PrivateRoute
               path="/dashboard/admin/schedule/edit/:id"
+              component={ScheduleEdit}
+            />
+
+            <PrivateRoute
+              path="/dashboard/user/schedule/add"
+              component={ScheduleAdd}
+            />
+            <PrivateRoute
+              path="/dashboard/user/schedule/list"
+              component={ScheduleList}
+            />
+            <PrivateRoute
+              path="/dashboard/user/schedule/show/:id"
+              component={ScheduleShow}
+            />
+            <PrivateRoute
+              path="/dashboard/user/schedule/edit/:id"
               component={ScheduleEdit}
             />
           </AuthProvider>

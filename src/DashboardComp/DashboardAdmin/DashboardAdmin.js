@@ -6,10 +6,12 @@ import GMap from "../../components/Map/GoogleMap";
 import styled from "styled-components";
 
 const DashMainAdmin = styled.div`
-  margin: auto;
-
+  width: 100 %;
+  min-height: 100px;
   background: white;
+  font-family: "Montserrat", sans-serif;
 `;
+
 const DashCont = styled.div`
   align-items: center;
   margin: auto;

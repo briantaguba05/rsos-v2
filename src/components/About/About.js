@@ -41,12 +41,10 @@ const About = () => {
           <AboutP>
             Stands for, (Police And Riders Alliance Club), formed in 2015
           </AboutP>
-          <AboutP>The group consists of members from various government agencies, </AboutP>
+          <AboutP>
+            The group consists of members from various government agencies,{" "}
+          </AboutP>
           <AboutP>like military, police, fireman, and other people.</AboutP>
-          <AboutP>lorem ipsum dolor met additional info</AboutP>
-          <AboutP>lorem ipsum dolor met additional info</AboutP>
-          <AboutP>lorem ipsum dolor met additional info</AboutP>
-          <AboutP>lorem ipsum dolor met additional info</AboutP>
 
           <br></br>
           <br></br>

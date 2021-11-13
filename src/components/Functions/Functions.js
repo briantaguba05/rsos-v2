@@ -17,6 +17,8 @@ import FuncsGas from "../../images/functionsimg/gas_nearby.png";
 import FuncsGuide from "../../images/functionsimg/inapp_guides.png";
 import FuncsNews from "../../images/functionsimg/inapp_news.png";
 import FuncsWeather from "../../images/functionsimg/inapp_weather.png";
+import FuncsEmergency from "../../images/functionsimg/emergency.png";
+import FuncsReport from "../../images/functionsimg/report_button.png";
 
 const Functions = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,7 +84,8 @@ const Functions = () => {
           With just one-click, they will get a notification that you are in need
           of help!
         </FunctPSec>
-        {/*<FuncIMG src={FuncsWeather} />*/}
+        <FuncIMG src={FuncsEmergency} />
+        <FuncIMG src={FuncsReport} />
       </FunctContentSec>
     </>
   );

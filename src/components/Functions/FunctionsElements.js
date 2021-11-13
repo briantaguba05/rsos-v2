@@ -55,8 +55,8 @@ export const FunctH1Sec = styled.h1`
 `;
 
 export const FuncIMG = styled.img`
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   margin: auto;
 
   @media screen and (max width: 480px) {

@@ -49,15 +49,8 @@ const SidebarDash = () => {
       <SidebarContainer>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarTitle>Dashboard</SidebarTitle>
+            <SidebarTitle>User Panel</SidebarTitle>
             <SidebarList>
-              <SidebarLink to="/dashboard/user">
-                <SidebarListItem activeClass="active">
-                  <LineStyle SidebarIcon />
-                  Dashboard
-                </SidebarListItem>
-              </SidebarLink>
-
               <SidebarLink to="/dashboard/user/myinfo">
                 <SidebarListItem active>
                   <PermIdentity SidebarIcon />
@@ -65,29 +58,31 @@ const SidebarDash = () => {
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarLink onClick={togglePopup}>
+              <SidebarLink to="/dashboard/weather">
                 <SidebarListItem>
                   <Cloud SidebarIcon />
                   Weather
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarLink to="news">
+              <SidebarLink to="/dashboard/user/news">
                 <SidebarListItem>
                   <Note SidebarIcon />
                   NEWS
                 </SidebarListItem>
               </SidebarLink>
 
-              <SidebarListItem>
-                <People SidebarIcon />
-                TEAMS
-              </SidebarListItem>
+              <SidebarLink to="/dashboard/user/schedule/list">
+                <SidebarListItem>
+                  <People SidebarIcon />
+                  Schedule
+                </SidebarListItem>
+              </SidebarLink>
             </SidebarList>
           </SidebarMenu>
 
           <SidebarMenu>
-            <SidebarTitle>TITLE #2</SidebarTitle>
+            <SidebarTitle>Additional</SidebarTitle>
             <SidebarList>
               <SidebarLink to="">
                 <SidebarListItem>

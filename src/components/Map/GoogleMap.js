@@ -8,11 +8,11 @@ import {
 } from "react-google-maps";
 import Geocode from "react-geocode";
 import Autocomplete from "react-google-autocomplete";
-//import { Descriptions } from "antd";
+import { Descriptions } from "antd";
 
-/*const {
+const {
   MarkerWithLabel,
-} = require("react-google-maps/lib/components/addons/MarkerWithLabel");*/
+} = require("react-google-maps/lib/components/addons/MarkerWithLabel");
 
 Geocode.setApiKey("AIzaSyBq8z9IyhCI5LqM79AGVIOXyk-kG0AU4I0");
 Geocode.enableDebug();
@@ -225,8 +225,6 @@ class LocationSearchModal extends React.Component {
     const AsyncMap = withScriptjs(
       withGoogleMap((props) => (
         <GoogleMap
-
-          
           defaultZoom={this.state.zoom}
           defaultCenter={{
             lat: this.state.mapPosition.lat,
@@ -273,15 +271,13 @@ class LocationSearchModal extends React.Component {
           </InfoWindow>
           <Marker />
 
-          {/* <MarkerWithLabel
+          {/*<MarkerWithLabel
                             position={{ lat: -34.397, lng: 150.644 }}
                             labelAnchor={new google.maps.Point(0, 0)}
                             labelStyle={{ backgroundColor: "yellow", fontSize: "32px", padding: "16px" }}
                         >
                             <div>Hello There!</div>
-                        </MarkerWithLabel> */}
-
-          
+                        </MarkerWithLabel>*/}
         </GoogleMap>
       ))
     );
@@ -290,23 +286,25 @@ class LocationSearchModal extends React.Component {
       <div
         style={{
           paddingLeft: 0,
-          margin: " auto",
+          margin: "auto",
           width: "100%",
           flexFlow: "row nowrap",
           justifyContent: "center",
         }}
       >
-        {/*<h1>Google Map Basic</h1>
         <Descriptions bordered>
           <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
+          <p></p>
           <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>
+          <p></p>
           <Descriptions.Item label="State">
             {this.state.state}
           </Descriptions.Item>
+          <p></p>
           <Descriptions.Item label="Address">
             {this.state.address}
           </Descriptions.Item>
-        </Descriptions>*/}
+        </Descriptions>
 
         <AsyncMap
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq8z9IyhCI5LqM79AGVIOXyk-kG0AU4I0&libraries=places"

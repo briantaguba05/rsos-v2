@@ -11,6 +11,7 @@ const dashboard = () => {
   return (
     <>
       <ScrollToTop />
+      
       <Dashboard handleLogout={handleLogout} />
       {/*<Mapbox />*/}
       <GMap />

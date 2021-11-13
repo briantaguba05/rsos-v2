@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 /*react-router-dom for Link*/
 
 export const SidebarContainer = styled.div`
-  flex: 1;
+  display: flex;
+  justify-content: start;
   height: calc(100vh - 50px);
   background-color: white;
-  position: sticky;
+  overflow-y: auto;
 `;
 
 export const SidebarWrapper = styled.div`
@@ -51,6 +52,11 @@ export const SidebarIcon = styled.div`
 `;
 
 export const SidebarLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
+export const SidebarButton = styled.button`
   text-decoration: none;
   color: inherit;
 `;

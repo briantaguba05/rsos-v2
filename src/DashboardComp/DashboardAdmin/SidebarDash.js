@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useAuth } from "../../components/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import { Modal } from "../../components/Modals/ModalMain";
+import { createGlobalStyle } from "styled-components";
 import {
   LineStyle,
   PermIdentity,
@@ -19,6 +21,7 @@ import {
   SidebarList,
   SidebarListItem,
   SidebarLink,
+  SidebarButton,
 } from "./SidebarDashElements";
 
 const SidebarDash = () => {
@@ -26,6 +29,12 @@ const SidebarDash = () => {
   const [sidebar, setSidebar] = useState(false);
   const { currentUser, logout } = useAuth();
   const history = useHistory();
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
 
   async function handleLogout() {
     setError("");
@@ -43,6 +52,15 @@ const SidebarDash = () => {
   const togglePopup = () => {
     setIsOpen(!isOpen);
   };
+
+  const GlobalStyle = createGlobalStyle`
+   
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  
+`;
 
   return (
     <>
@@ -65,6 +83,15 @@ const SidebarDash = () => {
                 </SidebarListItem>
               </SidebarLink>
 
+              {/*<SidebarButton onClick={openModal}>
+                <Modal showModal={showModal} setShowModal={setShowModal} />
+                <GlobalStyle />
+                <SidebarListItem>
+                  <PermIdentity SidebarIcon />
+                  MODAL TEST POPUP
+                </SidebarListItem>
+              </SidebarButton>*/}
+
               <SidebarLink to="/dashboard/admin/schedule/list">
                 <SidebarListItem>
                   <People SidebarIcon />
@@ -77,7 +104,7 @@ const SidebarDash = () => {
           <SidebarMenu>
             <SidebarTitle>Features</SidebarTitle>
             <SidebarList>
-              <SidebarLink to="/dashboard/admin/weather">
+              <SidebarLink to="/dashboard/weather">
                 <SidebarListItem>
                   <Cloud SidebarIcon />
                   Weather
